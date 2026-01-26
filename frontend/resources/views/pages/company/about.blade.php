@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'About Us – Green Resources')
-@section('description', 'Learn about Green Resources: our mission, vision, and commitment to sustainability.')
+@section('title', 'About Us – Cisadane Raya Chemical')
+@section('description', 'Learn about Cisadane Raya Chemical: our mission, vision, and commitment to sustainability.')
 
 @section('content')
 {{-- Section 1: Banner --}}
@@ -21,7 +21,7 @@
     <div class="container">
         <div class="about-content">
             <p class="about-paragraph">
-                At Green Resources Pte Ltd, we are committed to responsible sourcing and trading that supports environmental sustainability, ethical practices, and long-term partnerships. As a trading company specializing in renewable, waste, and residue feedstocks, we prioritize transparency, effective risk management, and continuous improvement across our supply chain, in line with global sustainability standards.
+                At Cisadane Raya Chemical, we are committed to responsible sourcing and trading that supports environmental sustainability, ethical practices, and long-term partnerships. As a trading company specializing in renewable, waste, and residue feedstocks, we prioritize transparency, effective risk management, and continuous improvement across our supply chain, in line with global sustainability standards.
             </p>
             
             <p class="about-paragraph">

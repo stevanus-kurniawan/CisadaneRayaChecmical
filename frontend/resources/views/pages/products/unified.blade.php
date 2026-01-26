@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Products – Green Resources')
+@section('title', 'Products – Cisadane Raya Chemical')
 @section('description', 'Explore our range of sustainable products including feedstocks, methyl ester, and other solutions.')
 
 @php
@@ -63,7 +63,7 @@ if (!in_array($initialTab, ['feedstocks', 'methyl', 'others'])) {
     <div class="container">
         <div class="products-description">
             <p class="products-description-text">
-                All our products, including POME, PME, and UCO, bear the prestigious ISCC certification. Green Resources proudly offers a seamless integrated value chain that encompasses origination, precise logistical arrangements, secure storage, and efficient transportation to our valued clients across the Asia-Pacific region and Europe.
+                All our products, including POME, PME, and UCO, bear the prestigious ISCC certification. Cisadane Raya Chemical proudly offers a seamless integrated value chain that encompasses origination, precise logistical arrangements, secure storage, and efficient transportation to our valued clients across the Asia-Pacific region and Europe.
             </p>
             <p class="products-description-text">
                 Our proven track record in exporting to these regions underscores our unwavering commitment to reliability and uncompromising quality.

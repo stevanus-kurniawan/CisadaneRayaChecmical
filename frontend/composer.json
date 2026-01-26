@@ -1,7 +1,7 @@
 {
     "name": "laravel/laravel",
     "type": "project",
-    "description": "Green Resources Corporate Website & CMS",
+    "description": "Cisadane Raya Chemical Corporate Website & CMS",
     "keywords": ["laravel", "framework", "cms"],
     "license": "MIT",
     "require": {

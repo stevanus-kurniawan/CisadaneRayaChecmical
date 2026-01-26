@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Create Navigation Item – Green Resources CMS')
+@section('title', 'Create Navigation Item – CRC CMS')
 
 @section('content')
 <div class="admin-wrapper">
@@ -9,7 +9,7 @@
             <div class="admin-nav">
                 <a href="{{ route('home') }}" class="brand">
                     <span class="brand-mark">GR</span>
-                    <span>Green Resources CMS</span>
+                    <span>CRC CMS</span>
                 </a>
                 <div class="admin-nav-links">
                     <a href="{{ route('admin.dashboard') }}">Dashboard</a>

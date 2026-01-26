@@ -36,7 +36,7 @@ fi
 if [ ! -f ".env" ]; then
     echo "Creating .env file..."
     cat > .env << EOF
-APP_NAME=Green Resources
+APP_NAME=Cisadane Raya Chemical
 APP_ENV=local
 APP_KEY=
 APP_DEBUG=true

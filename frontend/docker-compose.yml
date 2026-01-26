@@ -23,6 +23,7 @@ services:
 
   # PHP-FPM Application
   app:
+    image: frontend-app:latest
     build:
       context: .
       dockerfile: Dockerfile

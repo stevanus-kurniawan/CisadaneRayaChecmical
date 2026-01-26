@@ -4,12 +4,12 @@
 $banner = [
     'title' => 'Events',
     'subtitle' => 'Upcoming and Past Events',
-    'image' => 'assets/HEADER GREEN RESOURCES.png'
+    'image' => 'assets/HEADER CISADANE RAYA CHEMICAL.png'
 ];
 @endphp
 
-@section('title', 'Events – Green Resources')
-@section('description', 'Discover upcoming events and past event highlights from Green Resources.')
+@section('title', 'Events – Cisadane Raya Chemical')
+@section('description', 'Discover upcoming events and past event highlights from Cisadane Raya Chemical.')
 
 @section('content')
 <section class="section">

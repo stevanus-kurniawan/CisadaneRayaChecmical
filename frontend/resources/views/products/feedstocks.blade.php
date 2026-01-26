@@ -4,11 +4,11 @@
 $banner = [
     'title' => 'Feedstocks',
     'subtitle' => 'Sustainable Feedstock Solutions',
-    'image' => 'assets/HEADER GREEN RESOURCES.png'
+    'image' => 'assets/HEADER CISADANE RAYA CHEMICAL.png'
 ];
 @endphp
 
-@section('title', 'Feedstocks – Green Resources')
+@section('title', 'Feedstocks – Cisadane Raya Chemical')
 @section('description', 'Explore our range of sustainable feedstocks for your production needs.')
 
 @section('content')

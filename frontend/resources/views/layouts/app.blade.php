@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'Green Resources – Corporate Website & CMS')</title>
-    <meta name="description" content="@yield('description', 'Green Resources is a modern, sustainable organization with a corporate website and CMS designed for clarity, credibility, and engagement.')" />
+    <title>@yield('title', 'Cisadane Raya Chemical – Corporate Website & CMS')</title>
+    <meta name="description" content="@yield('description', 'Cisadane Raya Chemical is a modern, sustainable organization with a corporate website and CMS designed for clarity, credibility, and engagement.')" />
     
     {{-- Favicon --}}
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}" />
@@ -17,6 +17,7 @@
     <meta name="msapplication-TileColor" content="#2d5016" />
     <meta name="msapplication-config" content="{{ asset('browserconfig.xml') }}" />
     
+    <link rel="stylesheet" href="{{ asset('css/tokens.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}" />
     
     {{-- Preload critical banner images for current page --}}
@@ -40,7 +41,7 @@
         <div class="container">
             <nav class="nav">
                 <a href="{{ route('home') }}" class="brand">
-                    <img src="{{ asset('assets/Green Resources Logo.png') }}" alt="Green Resources Logo" />
+                    <img src="{{ asset('assets/Green Resources Logo.png') }}" alt="Cisadane Raya Chemical Logo" />
                 </a>
                 <button
                     class="nav-toggle"
@@ -104,7 +105,7 @@
             <div class="footer-grid footer-grid-two">
                 <div>
                     <div class="brand">
-                        <img src="{{ asset('assets/Green Resources Logo white.png') }}" alt="Green Resources Logo" style="height: 40px;" />
+                        <img src="{{ asset('assets/Green Resources Logo white.png') }}" alt="Cisadane Raya Chemical Logo" style="height: 40px;" />
                     </div>
                     <p class="footer-text">
                         A modern, sustainable organization committed to excellence
@@ -121,7 +122,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; {{ date('Y') }} Green Resources. All rights reserved.</p>
+                <p>&copy; {{ date('Y') }} Cisadane Raya Chemical. All rights reserved.</p>
             </div>
         </div>
     </footer>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Products – Green Resources')
+@section('title', 'Products – Cisadane Raya Chemical')
 @section('description', 'Explore our range of sustainable products including feedstocks, methyl ester, and other solutions.')
 
 @section('content')

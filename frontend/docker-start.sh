@@ -2,7 +2,7 @@
 
 # Quick start script for Docker setup
 
-echo "🚀 Starting Green Resources Docker containers..."
+echo "🚀 Starting Cisadane Raya Chemical Docker containers..."
 
 # Build and start containers
 docker-compose up -d --build

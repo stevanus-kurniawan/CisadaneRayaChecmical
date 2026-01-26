@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Penetration Testing Script for Green Resources CMS
+# Penetration Testing Script for Cisadane Raya Chemical CMS
 # This script performs basic penetration tests
 
 BASE_URL="http://localhost:8000"

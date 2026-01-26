@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Admin Login – Green Resources CMS')
+@section('title', 'Admin Login – Cisadane Raya Chemical CMS')
 
 @section('content')
 <div class="auth-wrapper">
@@ -12,7 +12,7 @@
                     Admin
                 </div>
                 <div style="font-weight: 600; font-size: 0.95rem">
-                    Green Resources CMS
+                    Cisadane Raya Chemical CMS
                 </div>
             </div>
         </div>

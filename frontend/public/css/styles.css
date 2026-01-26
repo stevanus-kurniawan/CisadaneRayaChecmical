@@ -3,12 +3,18 @@
 
 /* Brand Colors */
 :root {
-  --brand-primary: #046554;
-  --brand-secondary: #a4dacc;
+  --brand-primary: var(--color-brand-green-900);
+  --brand-secondary: var(--color-brand-green-300);
   --brand-accent: #fda802;
-  --brand-black: #000000;
-  --brand-dark-gray: #444440;
-  --brand-white: #ffffff;
+  --brand-black: var(--color-brand-black-900);
+  --brand-dark-gray: var(--color-neutral-700);
+  --brand-white: var(--color-neutral-0);
+  
+  /* Aliases for product pages */
+  --primary-color: var(--brand-primary);
+  --secondary-color: var(--brand-secondary);
+  --text-color: var(--brand-black);
+  --text-light: var(--brand-dark-gray);
 }
 
 /* Global Styles */
@@ -74,7 +80,7 @@ header {
     rgba(249, 250, 251, 0.9),
     rgba(249, 250, 251, 0.7)
   );
-  border-bottom: 1px solid rgba(15, 118, 110, 0.1);
+  border-bottom: 1px solid rgba(0, 153, 68, 0.1);
 }
 
 .nav {
@@ -307,7 +313,7 @@ header {
 
 .nav-dropdown-menu a:hover,
 .nav-dropdown-menu a:focus-visible {
-  background-color: rgba(4, 101, 84, 0.05);
+  background-color: rgba(0, 153, 68, 0.05);
   color: var(--brand-primary);
 }
 
@@ -318,7 +324,7 @@ header {
 }
 
 .nav-dropdown-menu a.active {
-  background-color: rgba(4, 101, 84, 0.08);
+  background-color: rgba(0, 153, 68, 0.08);
   color: var(--brand-primary);
   font-weight: 600;
 }
@@ -334,7 +340,7 @@ header {
   color: var(--brand-white);
   font-weight: 600;
   font-size: 0.9rem;
-  box-shadow: 0 4px 12px rgba(4, 101, 84, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 153, 68, 0.2);
 }
 
 .nav-cta:hover {
@@ -415,7 +421,7 @@ header {
   border-radius: 0.5rem;
   overflow: hidden;
   position: relative;
-  background: linear-gradient(135deg, rgba(4, 101, 84, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(0, 153, 68, 0.1) 0%, rgba(33, 145, 123, 0.05) 100%);
 }
 
 .image-grid-card img {
@@ -435,8 +441,8 @@ header {
 
 .image-placeholder {
   aspect-ratio: 1;
-  background: linear-gradient(135deg, rgba(4, 101, 84, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%);
-  border: 2px dashed rgba(4, 101, 84, 0.2);
+  background: linear-gradient(135deg, rgba(0, 153, 68, 0.1) 0%, rgba(33, 145, 123, 0.05) 100%);
+  border: 2px dashed rgba(0, 153, 68, 0.2);
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
@@ -447,7 +453,7 @@ header {
 
 .image-placeholder::before {
   content: "Image Placeholder";
-  color: rgba(4, 101, 84, 0.4);
+  color: rgba(0, 153, 68, 0.4);
   font-size: 0.9rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -479,7 +485,7 @@ header {
 .about-banner-background {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(4, 101, 84, 0.8) 0%, rgba(5, 150, 105, 0.6) 100%),
+  background: linear-gradient(135deg, rgba(0, 153, 68, 0.8) 0%, rgba(33, 145, 123, 0.6) 100%),
               url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="%23f0f9f4"/><path d="M0 0L100 100M100 0L0 100" stroke="%23d1fae5" stroke-width="1" opacity="0.3"/></svg>');
   background-size: cover, 200px 200px;
   background-position: center center, 0 0;
@@ -560,7 +566,7 @@ header {
 .products-category-tile:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
-  border-color: rgba(4, 101, 84, 0.3);
+  border-color: rgba(0, 153, 68, 0.3);
 }
 
 .products-category-image {
@@ -582,8 +588,8 @@ header {
 .image-placeholder-category {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(4, 101, 84, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%);
-  border: 2px dashed rgba(4, 101, 84, 0.2);
+  background: linear-gradient(135deg, rgba(0, 153, 68, 0.1) 0%, rgba(33, 145, 123, 0.05) 100%);
+  border: 2px dashed rgba(0, 153, 68, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -593,7 +599,7 @@ header {
 
 .image-placeholder-category::before {
   content: "Image Placeholder";
-  color: rgba(4, 101, 84, 0.4);
+  color: rgba(0, 153, 68, 0.4);
   font-size: 0.85rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -737,10 +743,10 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(4, 101, 84, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%);
-  border: 2px dashed rgba(4, 101, 84, 0.2);
+  background: linear-gradient(135deg, rgba(0, 153, 68, 0.1) 0%, rgba(33, 145, 123, 0.05) 100%);
+  border: 2px dashed rgba(0, 153, 68, 0.2);
   border-radius: 0.5rem;
-  color: rgba(4, 101, 84, 0.4);
+  color: rgba(0, 153, 68, 0.4);
   font-size: 0.9rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -864,7 +870,7 @@ header {
 .page-banner-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(4, 101, 84, 0.7), rgba(4, 101, 84, 0.5));
+  background: linear-gradient(to bottom, rgba(0, 153, 68, 0.7), rgba(0, 153, 68, 0.5));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1023,7 +1029,7 @@ footer {
   width: 7px;
   height: 7px;
   border-radius: 999px;
-  background: #16a34a;
+  background: var(--brand-primary);
 }
 
 .hero-title {
@@ -1034,7 +1040,7 @@ footer {
 }
 
 .hero-title span.accent {
-  background: linear-gradient(to right, #16a34a, #22c55e, #0ea5e9);
+  background: linear-gradient(to right, var(--brand-primary), var(--color-brand-green-500), #0ea5e9);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -1089,7 +1095,7 @@ footer {
   font-size: 0.95rem;
   cursor: pointer;
   text-decoration: none;
-  box-shadow: 0 4px 12px rgba(4, 101, 84, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 153, 68, 0.2);
   transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
 }
 
@@ -1252,7 +1258,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #047857;
+  color: var(--brand-primary);
   font-size: 1.1rem;
 }
 
@@ -1289,7 +1295,7 @@ footer {
   border-radius: 999px;
   padding: 0.22rem 0.6rem;
   background: #ecfdf5;
-  color: #047857;
+  color: var(--brand-primary);
   font-size: 0.75rem;
 }
 
@@ -1325,7 +1331,7 @@ footer {
   align-items: center;
   justify-content: center;
   font-size: 0.75rem;
-  color: #059669;
+  color: var(--brand-primary);
 }
 
 /* Contact */
@@ -1380,7 +1386,7 @@ footer {
 
 .field input:focus,
 .field textarea:focus {
-  border-color: #10b981;
+  border-color: var(--brand-primary);
   box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.5);
 }
 
@@ -1490,7 +1496,7 @@ footer {
 }
 
 .admin-nav-link.active {
-  background: linear-gradient(to right, #22c55e, #0ea5e9);
+  background: linear-gradient(to right, var(--color-brand-green-500), #0ea5e9);
 }
 
 .admin-panel {
@@ -1530,7 +1536,7 @@ footer {
   width: 7px;
   height: 7px;
   border-radius: 999px;
-  background: #22c55e;
+  background: var(--color-brand-green-500);
 }
 
 .table {
@@ -1619,7 +1625,7 @@ footer {
   width: 30px;
   height: 30px;
   border-radius: 999px;
-  background: radial-gradient(circle at 30% 30%, #bbf7d0, #22c55e);
+  background: radial-gradient(circle at 30% 30%, #bbf7d0, var(--color-brand-green-500));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1705,13 +1711,13 @@ footer {
 }
 
 .admin-nav-links a:hover {
-  color: #047857;
-  background: rgba(5, 150, 105, 0.05);
+  color: var(--brand-primary);
+  background: rgba(33, 145, 123, 0.05);
 }
 
 .admin-nav-links a.active {
-  color: #047857;
-  background: rgba(5, 150, 105, 0.1);
+  color: var(--brand-primary);
+  background: rgba(33, 145, 123, 0.1);
   font-weight: 500;
 }
 
@@ -1748,7 +1754,7 @@ footer {
 }
 
 .admin-card:hover {
-  border-color: rgba(5, 150, 105, 0.3);
+  border-color: rgba(33, 145, 123, 0.3);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
@@ -2011,7 +2017,7 @@ footer {
   flex: 1;
   max-width: 280px;
   padding: 1rem 2rem;
-  background-color: #7cb342;
+  background-color: var(--brand-primary);
   color: #fff;
   text-align: center;
   text-decoration: none;
@@ -2022,11 +2028,11 @@ footer {
 }
 
 .product-tab:hover {
-  background-color: #558b2f;
+  background-color: var(--color-brand-green-600);
 }
 
 .product-tab.is-active {
-  background-color: #33691e;
+  background-color: var(--color-brand-green-900);
 }
 
 /* Category Box (title left, description right) */
@@ -2195,7 +2201,7 @@ footer {
 
 /* Left Green Panel */
 .contact-panel {
-  background-color: #00695c;
+  background-color: var(--brand-primary);
   color: #ffffff;
   padding: 3rem;
   display: flex;
@@ -2284,7 +2290,7 @@ footer {
 .form-field textarea:focus {
   outline: none;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(4, 101, 84, 0.1);
+  box-shadow: 0 0 0 3px rgba(0, 153, 68, 0.1);
 }
 
 .form-field textarea {

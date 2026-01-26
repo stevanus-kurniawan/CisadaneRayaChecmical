@@ -1,0 +1,39 @@
+/* CRC Design Tokens - Generated from design-token.json */
+:root {
+  --color-brand-green-300: #78A39C;
+  --color-brand-green-500: #4EC045;
+  --color-brand-green-600: #21917B;
+  --color-brand-green-900: #009944;
+  --color-brand-black-900: #000000;
+  --color-neutral-0: #FFFFFF;
+  --color-neutral-50: #F6F7F8;
+  --color-neutral-100: #EEF0F2;
+  --color-neutral-200: #D9DEE3;
+  --color-neutral-300: #C3CBD3;
+  --color-neutral-400: #9AA6B2;
+  --color-neutral-500: #6F7C89;
+  --color-neutral-600: #4B5560;
+  --color-neutral-700: #2F3740;
+  --color-neutral-800: #1E242B;
+  --color-neutral-900: #0B0F14;
+  --color-semantic-bg-default: #FFFFFF;
+  --color-semantic-bg-subtle: #F6F7F8;
+  --color-semantic-bg-inverse: #0B0F14;
+  --color-semantic-text-default: #0B0F14;
+  --color-semantic-text-muted: #4B5560;
+  --color-semantic-text-inverse: #FFFFFF;
+  --color-semantic-text-brand: #009944;
+  --color-semantic-border-default: #D9DEE3;
+  --color-semantic-border-strong: #C3CBD3;
+  --color-semantic-border-brand: #009944;
+  --color-semantic-primary-default: #009944;
+  --color-semantic-primary-hover: #21917B;
+  --color-semantic-primary-active: #009944;
+  --color-semantic-primary-textOnPrimary: #FFFFFF;
+  --color-semantic-secondary-default: #78A39C;
+  --color-semantic-secondary-hover: #4EC045;
+  --color-semantic-secondary-textOnSecondary: #0B0F14;
+  --color-semantic-success-default: #4EC045;
+  --color-semantic-success-text: #FFFFFF;
+  --color-semantic-focusRing-default: #21917B;
+}

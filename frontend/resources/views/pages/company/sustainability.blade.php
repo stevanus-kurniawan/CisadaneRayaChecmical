@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Sustainability – Green Resources')
-@section('description', 'Learn about Green Resources sustainability commitments and certifications.')
+@section('title', 'Sustainability – Cisadane Raya Chemical')
+@section('description', 'Learn about Cisadane Raya Chemical sustainability commitments and certifications.')
 
 @section('content')
 <div class="sustainability-page">
@@ -23,7 +23,7 @@
         <div class="about-content">
             <div class="about-feature-heading">OUR COMMITMENT</div>
             <p class="about-paragraph sustainability-paragraph sustainability-paragraph-last">
-                Green Resources Pte Ltd is committed to responsible sourcing and trading practices that support environmental sustainability, ethical conduct, and long-term partnerships. As a trading company specializing in renewable, waste, and residue feedstocks, we prioritize transparency, risk management, and continuous improvement across our supply chain.
+                Cisadane Raya Chemical is committed to responsible sourcing and trading practices that support environmental sustainability, ethical conduct, and long-term partnerships. As a trading company specializing in renewable, waste, and residue feedstocks, we prioritize transparency, risk management, and continuous improvement across our supply chain.
             </p>
         </div>
     </div>
@@ -35,7 +35,7 @@
         <div class="about-content">
             <div class="about-feature-heading">OUR CERTIFICATIONS</div>
             <p class="about-paragraph sustainability-paragraph">
-                Green Resources is consistently certified under the sustainability schemes below, reinforcing our commitment to maintaining high environmental standards throughout our operations.
+                Cisadane Raya Chemical is consistently certified under the sustainability schemes below, reinforcing our commitment to maintaining high environmental standards throughout our operations.
             </p>
             <p class="about-paragraph sustainability-paragraph sustainability-paragraph-last">
                 These certifications reflect our dedication to sustainable development and responsible business practices across our value chain.

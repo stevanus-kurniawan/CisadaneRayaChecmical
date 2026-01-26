@@ -4,11 +4,11 @@
 $banner = [
     'title' => 'Methyl Ester',
     'subtitle' => 'Premium Methyl Ester Products',
-    'image' => 'assets/HEADER GREEN RESOURCES.png'
+    'image' => 'assets/HEADER CISADANE RAYA CHEMICAL.png'
 ];
 @endphp
 
-@section('title', 'Methyl Ester – Green Resources')
+@section('title', 'Methyl Ester – Cisadane Raya Chemical')
 @section('description', 'Discover our premium methyl ester products for various applications.')
 
 @section('content')

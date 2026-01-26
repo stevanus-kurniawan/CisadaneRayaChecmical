@@ -4,11 +4,11 @@
 $banner = [
     'title' => 'Other Products',
     'subtitle' => 'Additional Product Solutions',
-    'image' => 'assets/HEADER GREEN RESOURCES.png'
+    'image' => 'assets/HEADER CISADANE RAYA CHEMICAL.png'
 ];
 @endphp
 
-@section('title', 'Other Products – Green Resources')
+@section('title', 'Other Products – Cisadane Raya Chemical')
 @section('description', 'Explore our additional product solutions and services.')
 
 @section('content')

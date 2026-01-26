@@ -3,13 +3,13 @@
 @php
 $banner = [
     'title' => 'News',
-    'subtitle' => 'Latest Updates from Green Resources',
-    'image' => 'assets/HEADER GREEN RESOURCES.png'
+    'subtitle' => 'Latest Updates from Cisadane Raya Chemical',
+    'image' => 'assets/HEADER CISADANE RAYA CHEMICAL.png'
 ];
 @endphp
 
-@section('title', 'News – Green Resources')
-@section('description', 'Stay updated with the latest news and updates from Green Resources.')
+@section('title', 'News – Cisadane Raya Chemical')
+@section('description', 'Stay updated with the latest news and updates from Cisadane Raya Chemical.')
 
 @section('content')
 <section class="section">

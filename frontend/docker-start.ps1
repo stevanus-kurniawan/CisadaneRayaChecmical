@@ -1,6 +1,6 @@
 # Quick start script for Docker setup (PowerShell)
 
-Write-Host "🚀 Starting Green Resources Docker containers..." -ForegroundColor Green
+Write-Host "🚀 Starting Cisadane Raya Chemical Docker containers..." -ForegroundColor Green
 
 # Build and start containers
 docker-compose up -d --build

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>New Inquiry from Green Resources Website</title>
+    <title>New Inquiry from Cisadane Raya Chemical Website</title>
 </head>
 <body>
     <h2>New Inquiry Received</h2>

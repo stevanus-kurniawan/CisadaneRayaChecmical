@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Business / Products / Services – Green Resources')
-@section('description', 'Explore Green Resources business portfolio, products, and services.')
+@section('title', 'Business / Products / Services – Cisadane Raya Chemical')
+@section('description', 'Explore Cisadane Raya Chemical business portfolio, products, and services.')
 
 @section('content')
 <section class="section">
@@ -10,7 +10,7 @@
             <div class="section-kicker">Our business</div>
             <h1 class="section-title">Products &amp; Services</h1>
             <p class="section-description">
-                This section will showcase Green Resources' business lines, products, and services.
+                This section will showcase Cisadane Raya Chemical's business lines, products, and services.
                 Content will be fully manageable through the CMS.
             </p>
         </div>

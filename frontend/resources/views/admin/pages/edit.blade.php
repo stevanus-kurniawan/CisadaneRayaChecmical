@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Edit Page – Green Resources CMS')
+@section('title', 'Edit Page – Cisadane Raya Chemical CMS')
 
 @section('content')
 <div class="admin-wrapper">
@@ -9,7 +9,7 @@
             <div class="admin-nav">
                 <a href="{{ route('home') }}" class="brand">
                     <span class="brand-mark">GR</span>
-                    <span>Green Resources CMS</span>
+                    <span>Cisadane Raya Chemical CMS</span>
                 </a>
                 <div class="admin-nav-links">
                     <a href="{{ route('admin.dashboard') }}">Dashboard</a>
@@ -213,7 +213,7 @@
                                     name="banner[image]"
                                     type="text"
                                     value="{{ old('banner.image', $page->banner['image'] ?? '') }}"
-                                    placeholder="assets/HEADER GREEN RESOURCES.png"
+                                    placeholder="assets/HEADER CISADANE RAYA CHEMICAL.png"
                                     onchange="updateBannerPreview(this.value)"
                                 />
                                 <small style="color: #6b7280; font-size: 0.875rem; margin-top: 0.25rem; display: block;">

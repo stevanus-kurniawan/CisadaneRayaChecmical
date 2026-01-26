@@ -3,22 +3,22 @@
 @php
 $banner = [
     'title' => 'About Us',
-    'subtitle' => 'Learn more about Green Resources',
-    'image' => 'assets/HEADER GREEN RESOURCES.png'
+    'subtitle' => 'Learn more about Cisadane Raya Chemical',
+    'image' => 'assets/HEADER CISADANE RAYA CHEMICAL.png'
 ];
 @endphp
 
-@section('title', 'About Us – Green Resources')
-@section('description', 'Learn about Green Resources: our mission, vision, and commitment to sustainability.')
+@section('title', 'About Us – Cisadane Raya Chemical')
+@section('description', 'Learn about Cisadane Raya Chemical: our mission, vision, and commitment to sustainability.')
 
 @section('content')
 <section class="section">
     <div class="container">
         <div class="section-header">
             <div class="section-kicker">Company</div>
-            <h1 class="section-title">About Green Resources</h1>
+            <h1 class="section-title">About Cisadane Raya Chemical</h1>
             <p class="section-description">
-                Green Resources is a forward-looking organization focused on sustainable 
+                Cisadane Raya Chemical is a forward-looking organization focused on sustainable 
                 growth, innovation, and environmental responsibility. We are committed 
                 to providing high-quality products and services that support a greener future.
             </p>
