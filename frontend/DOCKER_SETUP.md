@@ -26,8 +26,8 @@ This guide will help you set up and run the Green Resources website using Docker
    ```
 
 4. **Access the application:**
-   - Website: http://localhost:8000
-   - Admin Panel: http://localhost:8000/admin/login
+   - Website: http://localhost:8080
+   - Admin Panel: http://localhost:8080/admin/login
    - Default Admin Credentials:
      - Email: `admin@greenresources.com`
      - Password: `admin123`
@@ -37,8 +37,8 @@ This guide will help you set up and run the Green Resources website using Docker
 The setup includes three services:
 
 1. **app** - PHP-FPM 8.2 with Laravel application
-2. **nginx** - Nginx web server (port 8000)
-3. **postgres** - PostgreSQL 15 database (port 5433)
+2. **nginx** - Nginx web server (port 8080)
+3. **postgres** - PostgreSQL 15 database (port 5434)
 
 ## Common Commands
 
@@ -91,7 +91,7 @@ docker-compose exec app php artisan view:clear
 ## Database Access
 
 - **Host:** localhost
-- **Port:** 5433
+- **Port:** 5434
 - **Database:** greenresource
 - **Username:** postgres
 - **Password:** postgres123
@@ -111,10 +111,10 @@ The `.env` file in the `frontend` directory is used for configuration. Key varia
 ## Troubleshooting
 
 ### Port already in use
-If port 8000 is already in use, change it in `docker-compose.yml`:
+If port 8080 is already in use, change it in `docker-compose.yml` under the `nginx` service:
 ```yaml
 ports:
-  - "8080:80"  # Change 8000 to 8080
+  - "9080:80"  # Use 9080 or another free port
 ```
 
 ### Permission errors

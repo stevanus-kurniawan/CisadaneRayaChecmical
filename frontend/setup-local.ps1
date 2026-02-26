@@ -32,6 +32,13 @@ try {
 $scriptPath = Split-Path -Parent $MyInvocation.MyCommand.Path
 Set-Location $scriptPath
 
+# Ensure .env exists for DB_PASSWORD (docker-compose)
+if (-not (Test-Path ".env")) {
+    Write-Host "Creating .env from .env.example..." -ForegroundColor Yellow
+    if (Test-Path ".env.example") { Copy-Item ".env.example" ".env" }
+    else { Copy-Item "env.example.template" ".env"; (Get-Content ".env") -replace 'DB_PASSWORD=CHANGE_THIS_TO_SECURE_PASSWORD', 'DB_PASSWORD=postgres123' -replace 'APP_URL=.*', 'APP_URL=http://localhost:8080' | Set-Content ".env" }
+}
+
 Write-Host ""
 Write-Host "Building and starting Docker containers..." -ForegroundColor Yellow
 Write-Host "This may take several minutes on first run..." -ForegroundColor Gray
@@ -44,7 +51,7 @@ if ($LASTEXITCODE -ne 0) {
     Write-Host "✗ Failed to build/start containers" -ForegroundColor Red
     Write-Host "Common issues:" -ForegroundColor Yellow
     Write-Host "  1. Docker Desktop needs to be restarted" -ForegroundColor White
-    Write-Host "  2. Port 80 might be in use (check with: netstat -ano | findstr ':80 ')" -ForegroundColor White
+    Write-Host "  2. Port 8080 might be in use (check with: netstat -ano | findstr ':8080 ')" -ForegroundColor White
     Write-Host "  3. WSL2 backend not properly configured" -ForegroundColor White
     Write-Host ""
     Write-Host "See SETUP_INSTRUCTIONS.md for troubleshooting steps" -ForegroundColor Yellow
@@ -92,8 +99,8 @@ Write-Host "✓ Setup Complete!" -ForegroundColor Green
 Write-Host "=========================================" -ForegroundColor Green
 Write-Host ""
 Write-Host "🌐 Access your application:" -ForegroundColor White
-Write-Host "   Website: http://localhost" -ForegroundColor Cyan
-Write-Host "   Admin:   http://localhost/admin/login" -ForegroundColor Cyan
+Write-Host "   Website: http://localhost:8080" -ForegroundColor Cyan
+Write-Host "   Admin:   http://localhost:8080/admin/login" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "🔐 Admin Credentials:" -ForegroundColor White
 Write-Host "   Email:    admin@greenresources.com" -ForegroundColor Gray

@@ -35,6 +35,10 @@ Route::group([], function () {
             return view('pages.company.sustainability');
         })->name('company.sustainability');
         
+        Route::get('/sustainability-certification-report', function () {
+            return view('pages.company.sustainability-cert-report');
+        })->name('company.sustainability.cert-report');
+        
         Route::get('/commercial-partner', function () {
             return (new PageController())->show('company-commercial-partner');
         })->name('company.partner');

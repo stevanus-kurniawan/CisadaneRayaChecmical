@@ -16,64 +16,77 @@
     </div>
 </section>
 
-{{-- Section 2: Description --}}
+{{-- Section 2: Portfolio Hero + Product Grid --}}
 <section class="section">
     <div class="container">
-        <div class="products-description">
-            <p class="products-description-text">
-                All our products, including POME, PME, and UCO, bear the prestigious ISCC certification. Cisadane Raya Chemical proudly offers a seamless integrated value chain that encompasses origination, precise logistical arrangements, secure storage, and efficient transportation to our valued clients across the Asia-Pacific region and Europe.
-            </p>
-            <p class="products-description-text">
-                Our proven track record in exporting to these regions underscores our unwavering commitment to reliability and uncompromising quality.
-            </p>
+        {{-- Hero card, same styling as green-box on home --}}
+        <div class="green-box products-portfolio-hero">
+            <h2 class="green-box-title">Our High-Quality Oleochemical Portfolio</h2>
         </div>
-    </div>
-</section>
 
-{{-- Section 3: Category Section --}}
-<section class="section">
-    <div class="container">
-        <div class="products-category-header">
-            <h2 class="products-category-title">Key Product Categories</h2>
-            <p class="products-category-subtitle">Discover More about Our Sustainable Solutions</p>
-        </div>
-        
-        <div class="products-category-grid">
-            <a href="{{ route('products.show', 'feedstocks') }}" class="products-category-tile" data-preload-image="{{ asset('assets/banners/products.png') }}">
-                <div class="products-category-image">
+        {{-- Three-product portfolio grid --}}
+        <div class="products-portfolio-grid">
+            {{-- Palm Oil --}}
+            <article class="products-portfolio-card">
+                <div class="products-portfolio-image">
                     <x-app-image 
                         src="{{ asset('assets/images/feedstocks-palm-oil.png') }}" 
-                        alt="Feedstocks"
+                        alt="Palm Oil"
                         fill
                         sizes="(max-width: 768px) 100vw, 33vw"
                     />
                 </div>
-                <h3 class="products-category-label">FEEDSTOCKS</h3>
-            </a>
-            
-            <a href="{{ route('products.show', 'methyl-ester') }}" class="products-category-tile" data-preload-image="{{ asset('assets/banners/products.png') }}">
-                <div class="products-category-image">
+                <h3 class="products-portfolio-title">Palm Oil</h3>
+                <ul class="products-portfolio-list">
+                    <li>RBD Palm Oil</li>
+                    <li>RBD Palm Olein</li>
+                    <li>RBD Palm Stearin</li>
+                    <li>Crude Palm Oil - CPO</li>
+                    <li>Crude Palm Kernel Oil - CPKO</li>
+                    <li>Palm Fatty Acid Distillate - PFAD</li>
+                    <li>RBD Palm Kernel Olein</li>
+                </ul>
+            </article>
+
+            {{-- Glycerin --}}
+            <article class="products-portfolio-card">
+                <div class="products-portfolio-image">
                     <x-app-image 
                         src="{{ asset('assets/images/methyl-ester.png') }}" 
-                        alt="Methyl Ester"
+                        alt="Glycerin"
                         fill
                         sizes="(max-width: 768px) 100vw, 33vw"
                     />
                 </div>
-                <h3 class="products-category-label">METHYL ESTER</h3>
-            </a>
-            
-            <a href="{{ route('products.show', 'others') }}" class="products-category-tile" data-preload-image="{{ asset('assets/banners/products.png') }}">
-                <div class="products-category-image">
+                <h3 class="products-portfolio-title">Glycerin</h3>
+                <ul class="products-portfolio-list">
+                    <li>Refined Glycerine 99.7% Min</li>
+                    <li>Refined Glycerine 99.5% Min</li>
+                    <li>Crude Glycerine 80% Min</li>
+                </ul>
+            </article>
+
+            {{-- Fatty Acid --}}
+            <article class="products-portfolio-card">
+                <div class="products-portfolio-image">
                     <x-app-image 
                         src="{{ asset('assets/images/others.jpeg') }}" 
-                        alt="Others"
+                        alt="Fatty Acid"
                         fill
                         sizes="(max-width: 768px) 100vw, 33vw"
                     />
                 </div>
-                <h3 class="products-category-label">OTHERS</h3>
-            </a>
+                <h3 class="products-portfolio-title">Fatty Acid</h3>
+                <ul class="products-portfolio-list">
+                    <li>Lauric Acid C12-99% Min</li>
+                    <li>Myristic Acid C14-99% Min</li>
+                    <li>Palmitic Acid C16-98% Min</li>
+                    <li>Stearic Acid C18-38% Min</li>
+                    <li>Strearic Acid C18-45% Min</li>
+                    <li>Rubber grade Stearic Acid</li>
+                    <li>Oleic Acid 75% Min</li>
+                </ul>
+            </article>
         </div>
     </div>
 </section>

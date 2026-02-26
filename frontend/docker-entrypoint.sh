@@ -19,9 +19,10 @@ mkdir -p /var/www/html/storage/framework/views
 mkdir -p /var/www/html/storage/framework/testing
 mkdir -p /var/www/html/storage/logs
 
-# Set permissions - skip on Windows volume mounts as it's very slow
-# Permissions are already set in Dockerfile, and volume mounts preserve them
-echo "Skipping permission setting (already done in Dockerfile)..."
+# Set permissions so www-data can write (volume mounts often break ownership)
+echo "Setting permissions for storage and bootstrap/cache..."
+chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache 2>/dev/null || true
+chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
 # Create OPcache directory
 mkdir -p /var/www/html/storage/framework/cache/opcache 2>/dev/null || true

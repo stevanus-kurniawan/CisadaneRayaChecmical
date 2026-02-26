@@ -1,4 +1,5 @@
-FROM php:8.2-fpm
+# Use Bookworm for stable apt mirrors (avoids Debian trixie 503/404 issues)
+FROM php:8.2-fpm-bookworm
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -20,9 +21,9 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Set working directory
 WORKDIR /var/www/html
 
-# Copy entrypoint script
+# Copy entrypoint script (normalize line endings so it runs in container)
 COPY docker-entrypoint.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+RUN sed -i 's/\r$//' /usr/local/bin/docker-entrypoint.sh && chmod +x /usr/local/bin/docker-entrypoint.sh
 
 # Copy PHP OPcache configuration
 COPY docker/php/opcache.ini /usr/local/etc/php/conf.d/opcache.ini

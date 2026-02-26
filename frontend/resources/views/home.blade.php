@@ -8,7 +8,7 @@
 <section class="home-banner">
     <div
         class="home-banner-background"
-        style="background-image: url('{{ asset('assets/banners/home.png') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"
+        style="background-image: url('{{ asset('assets/banners/home.jpeg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"
     ></div>
 </section>
 
@@ -16,8 +16,9 @@
 <section class="section">
     <div class="container">
         <div class="green-box">
+            <h2 class="green-box-title">Nurturing Human Life Through the Gifts of the Palm Since 1975</h2>
             <p class="green-box-text">
-                At Cisadane Raya Chemical, we are committed to responsible sourcing and trading that supports environmental sustainability, ethical practices, and long-term partnerships. As a trading company specializing in renewable, waste, and residue feedstocks, we prioritize transparency, effective risk management, and continuous improvement across our supply chain, in line with global sustainability standards.
+                Providing the essential elements that cradle human living, born from nature, refined with care, and carried forward through a chain of hands committed to responsibility and compassion.
             </p>
             <a href="{{ route('company.about') }}">
                 <button class="btn-primary green-box-button" type="button">
@@ -28,43 +29,30 @@
     </div>
 </section>
 
-{{-- Section 3: Image Grid --}}
-<section class="section">
-    <div class="container">
-        <div class="image-grid">
-            <div class="image-grid-card">
-                <x-app-image 
-                    src="{{ asset('assets/images/home-grid-1.png') }}" 
-                    alt="Cisadane Raya Chemical – Image 1"
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
+{{-- Section 3: Certifications & Image Panels (banner image as background) --}}
+<section class="home-certifications-section">
+    <div class="home-certifications-bg" aria-hidden="true"></div>
+    <div class="container home-certifications-content">
+        <div class="certifications-panels">
+            {{-- Left: white box – single image with all certification logos (upload to assets/certifications/) --}}
+            <div class="cert-panel cert-panel-icons">
+                <div class="cert-logos-single">
+                    <img src="{{ asset('assets/images/logo_certificate_crc.png') }}" alt="Certifications: RSPO, ISO 9001, GMP+, Halal Indonesia, ISCC, FSSC 22000, SMETA Sedex" class="cert-logos-img" onerror="this.style.display='none'; this.nextElementSibling?.classList.add('show');" />
+                    <div class="cert-logos-fallback" aria-hidden="true">Certifications</div>
+                </div>
             </div>
-            <div class="image-grid-card">
-                <x-app-image 
-                    src="{{ asset('assets/images/home-grid-2.png') }}" 
-                    alt="Cisadane Raya Chemical – Image 2"
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-            </div>
-            <div class="image-grid-card">
-                <x-app-image 
-                    src="{{ asset('assets/images/home-grid-3.png') }}" 
-                    alt="Cisadane Raya Chemical – Image 3"
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-            </div>
-            <div class="image-grid-card">
-                <x-app-image 
-                    src="{{ asset('assets/images/home-grid-4.jpeg') }}" 
-                    alt="Cisadane Raya Chemical – Image 4"
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
+            <div class="cert-panel-divider" aria-hidden="true"></div>
+            {{-- Right: RSPO certificate document --}}
+            <div class="cert-panel cert-panel-image">
+                <div class="cert-image-slot">
+                    <img src="{{ asset('assets/images/Sertifikat-RSPO.jpeg') }}" alt="RSPO Certificate – PT. Cisadane Raya Chemical" class="cert-certificate-img" onerror="this.style.display='none'; this.nextElementSibling?.classList.add('show');" />
+                    <div class="cert-image-fallback" aria-hidden="true">RSPO Certificate</div>
+                </div>
             </div>
         </div>
+        <p class="home-certifications-tagline">
+            Turning nature's versatility into palm-based food products and advanced oleochemicals
+        </p>
     </div>
 </section>
 @endsection
