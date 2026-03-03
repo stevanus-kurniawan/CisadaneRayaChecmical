@@ -1,6 +1,7 @@
 # Frontend server (172.28.92.56) — Laravel app + Nginx (DB on 172.28.92.57)
 # Usage: docker compose -f docker-compose.frontend.yml up -d --build
-# Set APP_HTTP_PORT in .env or below; ensure .env has DB_HOST=172.28.92.57
+# BACKEND_DB_HOST/BACKEND_DB_PORT override the backend server (default 172.28.92.57:5002).
+# Do NOT rely on .env DB_HOST here — it may be "postgres" for local docker; this file overrides.
 
 services:
   app:
@@ -14,8 +15,8 @@ services:
     env_file:
       - .env
     environment:
-      - DB_HOST=${DB_HOST:-172.28.92.57}
-      - DB_PORT=${DB_PORT:-5002}
+      - DB_HOST=${BACKEND_DB_HOST:-172.28.92.57}
+      - DB_PORT=${BACKEND_DB_PORT:-5002}
       - DB_DATABASE=${DB_DATABASE:-greenresource}
       - DB_USERNAME=${DB_USERNAME:-postgres}
       - DB_PASSWORD=${DB_PASSWORD}
