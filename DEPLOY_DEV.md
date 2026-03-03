@@ -68,22 +68,22 @@ docker compose -f docker-compose.backend.yml logs -f postgres
 
 ### 1.5 Open firewall (if applicable)
 
-Allow the **frontend server IP (172.28.92.56)** to connect to the DB port (e.g. 5432):
+Allow the **frontend server IP (172.28.92.56)** to connect to the DB port **5002**:
 
 ```bash
 # Example for firewalld (RHEL/CentOS)
-sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="172.28.92.56" port port="5432" protocol="tcp" accept'
+sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="172.28.92.56" port port="5002" protocol="tcp" accept'
 sudo firewall-cmd --reload
 
 # Or ufw (Ubuntu)
-sudo ufw allow from 172.28.92.56 to any port 5432
+sudo ufw allow from 172.28.92.56 to any port 5002
 sudo ufw reload
 ```
 
 ### 1.6 Note for frontend
 
 - **DB host for frontend:** `172.28.92.57`
-- **DB port:** value of `DB_PORT` in `.env.backend` (e.g. 5432)
+- **DB port:** `5002` (value of `DB_PORT` in `.env.backend`)
 - **DB name:** `greenresource` (or value from `.env.backend`)
 - **DB user / password:** same as in `.env.backend`
 
@@ -122,11 +122,11 @@ Set at least:
 ```env
 APP_ENV=development
 APP_DEBUG=true
-APP_URL=http://172.28.92.56:PORT   # Replace PORT with your HTTP port when known
+APP_URL=http://172.28.92.56:8010
 
 DB_CONNECTION=pgsql
 DB_HOST=172.28.92.57
-DB_PORT=5432
+DB_PORT=5002
 DB_DATABASE=greenresource
 DB_USERNAME=postgres
 DB_PASSWORD=<same-as-backend-.env.backend>
@@ -151,21 +151,9 @@ cd /opt/crc-app/frontend
 docker compose -f docker-compose.frontend.yml up -d --build
 ```
 
-### 2.5 Set HTTP port
+### 2.5 HTTP port
 
-When you have the dev HTTP port (e.g. 8080), set it in `docker-compose.frontend.yml`:
-
-```yaml
-nginx:
-  ports:
-    - "YOUR_PORT:80"   # e.g. "8080:80"
-```
-
-Then:
-
-```bash
-docker compose -f docker-compose.frontend.yml up -d
-```
+Frontend is configured to listen on **port 8010**. To override, set `APP_HTTP_PORT` in `.env` or change the port in `docker-compose.frontend.yml`.
 
 ### 2.6 First-time Laravel setup inside app container
 
@@ -185,8 +173,8 @@ docker compose -f docker-compose.frontend.yml exec app php artisan config:clear
 
 ### 2.7 Verify
 
-- Open: `http://172.28.92.56:YOUR_PORT`
-- Admin (if seeded): `http://172.28.92.56:YOUR_PORT/admin/login`
+- Open: `http://172.28.92.56:8010`
+- Admin (if seeded): `http://172.28.92.56:8010/admin/login`
 
 ---
 
@@ -199,25 +187,25 @@ docker compose -f docker-compose.frontend.yml exec app php artisan config:clear
 | 3    | 172.28.92.57  | Open firewall for 172.28.92.56 → DB port |
 | 4    | 172.28.92.56  | Install Docker (if needed), clone repo, `cd frontend` |
 | 5    | 172.28.92.56  | Copy `.env.example` to `.env`, set `DB_*` to backend (172.28.92.57) |
-| 6    | 172.28.92.56  | Set HTTP port in `docker-compose.frontend.yml`, then `up -d --build` |
+| 6    | 172.28.92.56  | Run `up -d --build` (HTTP port 8010 is already set) |
 | 7    | 172.28.92.56  | Run `migrate`, optional `db:seed`, `storage:link` |
-| 8    | -             | Test in browser: `http://172.28.92.56:PORT` |
+| 8    | -             | Test in browser: `http://172.28.92.56:8010` |
 
 ---
 
-## Ports (to be filled when available)
+## Ports
 
-| Service   | Server        | Variable / Location        | Example |
-|----------|---------------|-----------------------------|---------|
-| HTTP     | 172.28.92.56  | `nginx` ports in `docker-compose.frontend.yml` | 8080 |
-| PostgreSQL | 172.28.92.57 | `DB_PORT` in `.env.backend` and in backend compose | 5432 |
+| Service   | Server        | Variable / Location        | Value |
+|----------|---------------|-----------------------------|-------|
+| HTTP     | 172.28.92.56  | `APP_HTTP_PORT` / nginx in `docker-compose.frontend.yml` | 8010 |
+| PostgreSQL | 172.28.92.57 | `DB_PORT` in `.env.backend` and in backend compose | 5002 |
 
 ---
 
 ## Troubleshooting
 
 - **Frontend cannot connect to DB:**  
-  Check firewall on 172.28.92.57 allows 172.28.92.56 to the DB port; confirm `DB_HOST`/`DB_PORT` in frontend `.env`.
+  Check firewall on 172.28.92.57 allows 172.28.92.56 to port **5002**; confirm `DB_HOST=172.28.92.57` and `DB_PORT=5002` in frontend `.env`.
 
 - **502 Bad Gateway:**  
   App container may not be up or not ready. Check `docker compose -f docker-compose.frontend.yml logs app`.
