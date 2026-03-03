@@ -17,6 +17,16 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductController;
 
+// Language switcher (GET): set session + cookie, redirect back
+Route::get('/locale/{locale}', function (string $locale) {
+    $supported = ['en', 'id'];
+    if (! in_array($locale, $supported, true)) {
+        return redirect()->back();
+    }
+    session()->put('locale', $locale);
+    return redirect()->back()->cookie('locale', $locale, 60 * 24 * 365); // 1 year
+})->name('locale.switch')->where('locale', 'en|id');
+
 // Temporarily disable response caching to debug performance
 Route::group([], function () {
     Route::get('/', [PageController::class, 'home'])->name('home');

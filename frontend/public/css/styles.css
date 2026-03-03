@@ -174,6 +174,21 @@ header {
   font-weight: 600;
 }
 
+.nav-lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-left: 0.5rem;
+}
+.nav-lang-switcher a::after {
+  display: none;
+}
+.nav-lang-switcher span {
+  color: var(--brand-dark-gray);
+  pointer-events: none;
+  font-weight: 400;
+}
+
 /* Dropdown Menu */
 .nav-dropdown {
   position: relative;
@@ -467,7 +482,7 @@ header {
 .certifications-panels {
   display: flex;
   align-items: stretch;
-  gap: 0;
+  gap: 1rem;
   max-width: 1100px;
   margin: 0 auto 2.5rem;
   min-height: 420px;
@@ -479,6 +494,11 @@ header {
   overflow: hidden;
   flex: 1;
   min-width: 0;
+}
+
+/* Home: certification cards with sharp corners per design */
+.home-certifications-section .cert-panel {
+  border-radius: 0;
 }
 
 .cert-panel-icons {
@@ -531,6 +551,13 @@ header {
   background: var(--brand-white);
   border-radius: 2px;
   margin: 0 0.5rem;
+}
+
+/* Home: extend white divider upward so it runs from below green box down between the two cards */
+.section + .home-certifications-section .cert-panel-divider {
+  align-self: stretch;
+  margin-top: -6rem;
+  height: calc(100% + 6rem);
 }
 
 .cert-panel-image {
@@ -1814,6 +1841,52 @@ footer {
   gap: 2rem;
 }
 
+.contact-location {
+  margin-top: 1.75rem;
+}
+
+.contact-map-link {
+  display: block;
+  text-decoration: none;
+}
+
+.contact-map-frame {
+  position: relative;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  background: #e5f3ea;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.contact-map-frame iframe {
+  display: block;
+  width: 100%;
+  height: 260px;
+  border: 0;
+  pointer-events: none;
+}
+
+.contact-map-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0.6rem 0.9rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent 60%);
+  color: #f9fafb;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.contact-map-overlay span {
+  background: rgba(3, 105, 161, 0.9);
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+}
+
 .contact-card {
   border-radius: 1.2rem;
   padding: 1.5rem 1.4rem 1.7rem;
@@ -2412,6 +2485,11 @@ footer {
     margin: 0.5rem 0;
   }
 
+  .section + .home-certifications-section .cert-panel-divider {
+    margin-top: 0;
+    height: 4px;
+  }
+
   .cert-logos-single {
     min-height: 220px;
   }
@@ -2538,6 +2616,13 @@ footer {
   .certification-logo {
     height: 100px;
     margin-bottom: 1.25rem;
+  }
+
+  /* Certification Sustainability Report – make white band block match green blocks on mobile */
+  .cert-report-block--white {
+    border-radius: 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .admin-shell {

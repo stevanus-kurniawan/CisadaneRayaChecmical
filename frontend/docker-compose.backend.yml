@@ -1,0 +1,32 @@
+# Backend server (172.28.92.57) — PostgreSQL only
+# Usage: docker compose -f docker-compose.backend.yml --env-file .env.backend up -d
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: crc_dev_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: greenresource
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - crc_backend_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  crc_backend_network:
+    driver: bridge

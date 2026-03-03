@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Cisadane Raya Chemical – Overview')
-@section('description', 'Cisadane Raya Chemical is a leading sustainable organization committed to excellence and environmental responsibility.')
+@section('title', __('messages.home.meta_title'))
+@section('description', __('messages.home.meta_description'))
 
 @section('content')
 {{-- Section 1: Banner --}}
@@ -16,13 +16,13 @@
 <section class="section">
     <div class="container">
         <div class="green-box">
-            <h2 class="green-box-title">Nurturing Human Life Through the Gifts of the Palm Since 1975</h2>
+            <h2 class="green-box-title">{{ __('messages.home.hero_title') }}</h2>
             <p class="green-box-text">
-                Providing the essential elements that cradle human living, born from nature, refined with care, and carried forward through a chain of hands committed to responsibility and compassion.
+                {{ __('messages.home.hero_text') }}
             </p>
             <a href="{{ route('company.about') }}">
                 <button class="btn-primary green-box-button" type="button">
-                    LEARN MORE ABOUT US
+                    {{ __('messages.home.learn_more') }}
                 </button>
             </a>
         </div>
@@ -34,24 +34,22 @@
     <div class="home-certifications-bg" aria-hidden="true"></div>
     <div class="container home-certifications-content">
         <div class="certifications-panels">
-            {{-- Left: white box – single image with all certification logos (upload to assets/certifications/) --}}
             <div class="cert-panel cert-panel-icons">
                 <div class="cert-logos-single">
-                    <img src="{{ asset('assets/images/logo_certificate_crc.png') }}" alt="Certifications: RSPO, ISO 9001, GMP+, Halal Indonesia, ISCC, FSSC 22000, SMETA Sedex" class="cert-logos-img" onerror="this.style.display='none'; this.nextElementSibling?.classList.add('show');" />
-                    <div class="cert-logos-fallback" aria-hidden="true">Certifications</div>
+                    <img src="{{ asset('assets/images/logo_certificate_crc.png') }}" alt="{{ __('messages.home.certifications_alt') }}" class="cert-logos-img" onerror="this.style.display='none'; this.nextElementSibling?.classList.add('show');" />
+                    <div class="cert-logos-fallback" aria-hidden="true">{{ __('messages.home.certifications_fallback') }}</div>
                 </div>
             </div>
             <div class="cert-panel-divider" aria-hidden="true"></div>
-            {{-- Right: RSPO certificate document --}}
             <div class="cert-panel cert-panel-image">
                 <div class="cert-image-slot">
-                    <img src="{{ asset('assets/images/Sertifikat-RSPO.jpeg') }}" alt="RSPO Certificate – PT. Cisadane Raya Chemical" class="cert-certificate-img" onerror="this.style.display='none'; this.nextElementSibling?.classList.add('show');" />
-                    <div class="cert-image-fallback" aria-hidden="true">RSPO Certificate</div>
+                    <img src="{{ asset('assets/images/Sertifikat-RSPO.jpeg') }}" alt="{{ __('messages.home.rspo_alt') }}" class="cert-certificate-img" onerror="this.style.display='none'; this.nextElementSibling?.classList.add('show');" />
+                    <div class="cert-image-fallback" aria-hidden="true">{{ __('messages.home.rspo_fallback') }}</div>
                 </div>
             </div>
         </div>
         <p class="home-certifications-tagline">
-            Turning nature's versatility into palm-based food products and advanced oleochemicals
+            {{ __('messages.home.cert_tagline') }}
         </p>
     </div>
 </section>

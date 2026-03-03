@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Contact Us – Cisadane Raya Chemical')
-@section('description', 'Get in touch with Cisadane Raya Chemical for corporate, partnership, or sustainability inquiries.')
+@section('title', __('messages.contact.meta_title'))
+@section('description', __('messages.contact.meta_description'))
 
 @section('content')
 {{-- Section 1: Banner --}}
@@ -20,36 +20,56 @@
 <section class="section">
     <div class="container">
         <div class="contact-layout">
-            {{-- Left Column: Green Panel --}}
             <div class="contact-panel">
-                <h2 class="contact-panel-heading">GET IN TOUCH<br>WITH US</h2>
+                <div class="contact-location" style="margin-bottom: 1.75rem;">
+                    <a
+                        href="https://maps.app.goo.gl/wpcBfd42WCuKwapNA"
+                        target="_blank"
+                        rel="noopener"
+                        class="contact-map-link"
+                        aria-label="Open PT Cisadane Raya Chemicals location in Google Maps"
+                    >
+                        <div class="contact-map-frame">
+                            <iframe
+                                src="https://www.google.com/maps?q=PT+Cisadane+Raya+Chemicals,+Jl.+Imam+Bonjol+No.+88,+Karawaci&output=embed"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                aria-hidden="true"
+                            ></iframe>
+                            <div class="contact-map-overlay">
+                                <span>Open in Google&nbsp;Maps</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <h2 class="contact-panel-heading">{!! __('messages.contact.heading') !!}</h2>
                 <p class="contact-panel-text">
-                    Reach out to our team to explore potential collaboration opportunities. We look forward to connecting with you and will respond at the earliest opportunity.
+                    {{ __('messages.contact.intro') }}
                 </p>
                 
                 <div class="contact-panel-info">
-                    <p class="contact-panel-company">Cisadane Raya Chemical</p>
+                    <p class="contact-panel-company">PT Cisadane Raya Chemical</p>
                     
                     <div class="contact-panel-row">
                         <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                         <div>
-                            <p>Samsung Hub</p>
-                            <p>3 Church St #13-02</p>
-                            <p>Singapore 049483</p>
+                            <p>Jl. Imam Bonjol No. 88</p>
+                            <p>RT 001/RW 004 Bojong Jaya</p>
+                            <p>Kecamatan Karawaci, Kota Tangerang</p>
+                            <p>Banten 15115 – Indonesia</p>
                         </div>
                     </div>
                     
                     <div class="contact-panel-row">
                         <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                         <div>
-                            <p>Tel: +65 6571 6500</p>
-                            <p>Fax: +65 6224 6625</p>
+                            <p>Phone : (021) 5520522</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {{-- Right Column: Contact Form --}}
             <div class="contact-form-wrapper">
                 @if(session('success'))
                     <div class="alert alert-success">
@@ -67,39 +87,39 @@
                     @csrf
                     
                     <div class="form-field">
-                        <label for="name">Name <span class="required">*</span></label>
-                        <input id="name" name="name" type="text" required value="{{ old('name') }}" placeholder="Your full name" />
+                        <label for="name">{{ __('messages.contact.label_name') }} <span class="required">*</span></label>
+                        <input id="name" name="name" type="text" required value="{{ old('name') }}" placeholder="{{ __('messages.contact.placeholder_name') }}" />
                         @error('name')
                             <span class="field-error">{{ $message }}</span>
                         @enderror
                     </div>
 
                     <div class="form-field">
-                        <label for="email">Email <span class="required">*</span></label>
-                        <input id="email" name="email" type="email" required value="{{ old('email') }}" placeholder="your@email.com" />
+                        <label for="email">{{ __('messages.contact.label_email') }} <span class="required">*</span></label>
+                        <input id="email" name="email" type="email" required value="{{ old('email') }}" placeholder="{{ __('messages.contact.placeholder_email') }}" />
                         @error('email')
                             <span class="field-error">{{ $message }}</span>
                         @enderror
                     </div>
 
                     <div class="form-field">
-                        <label for="subject">Inquiry <span class="required">*</span></label>
-                        <input id="subject" name="subject" type="text" required value="{{ old('subject') }}" placeholder="Subject of your inquiry" />
+                        <label for="subject">{{ __('messages.contact.label_inquiry') }} <span class="required">*</span></label>
+                        <input id="subject" name="subject" type="text" required value="{{ old('subject') }}" placeholder="{{ __('messages.contact.placeholder_subject') }}" />
                         @error('subject')
                             <span class="field-error">{{ $message }}</span>
                         @enderror
                     </div>
 
                     <div class="form-field">
-                        <label for="message">Message <span class="required">*</span></label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Your message...">{{ old('message') }}</textarea>
+                        <label for="message">{{ __('messages.contact.label_message') }} <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="5" required placeholder="{{ __('messages.contact.placeholder_message') }}">{{ old('message') }}</textarea>
                         @error('message')
                             <span class="field-error">{{ $message }}</span>
                         @enderror
                     </div>
 
                     <button class="btn-primary contact-submit" type="submit">
-                        SUBMIT YOUR INQUIRY
+                        {{ __('messages.contact.submit') }}
                     </button>
                 </form>
             </div>

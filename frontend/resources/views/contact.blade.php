@@ -25,17 +25,36 @@ $banner = [
 
             <div class="card" style="margin-top: 1.5rem">
                 <div class="card-header">
-                    <div class="card-icon">📧</div>
-                    <h3 class="card-title">Contact Information</h3>
+                    <div class="card-icon">📍</div>
+                    <h3 class="card-title">PT Cisadane Raya Chemicals</h3>
                 </div>
                 <ul class="card-list">
-                    <li><strong>Email:</strong> info@greenresources.com</li>
-                    <li><strong>Phone:</strong> +62 XXX XXX XXXX</li>
-                    <li><strong>Address:</strong> [Address will be configured via CMS]</li>
+                    <li><strong>Address:</strong> Jl. Imam Bonjol No. 88, RT 001/RW 004 Bojong Jaya, Kecamatan Karawaci, Kota Tangerang, Banten 15115 – Indonesia</li>
+                    <li><strong>Phone:</strong> (021) 5520522</li>
+                    <li><strong>Email:</strong> info@crc.com</li>
                 </ul>
-                <p class="card-body" style="margin-top: 1rem; font-size: 0.85rem; color: #64748b">
-                    All contact information can be managed through the CMS.
-                </p>
+            </div>
+
+            <div class="contact-location">
+                <a
+                    href="https://maps.app.goo.gl/wpcBfd42WCuKwapNA"
+                    target="_blank"
+                    rel="noopener"
+                    class="contact-map-link"
+                    aria-label="Open PT Cisadane Raya Chemicals location in Google Maps"
+                >
+                    <div class="contact-map-frame">
+                        <iframe
+                            src="https://www.google.com/maps?q=PT+Cisadane+Raya+Chemicals,+Jl.+Imam+Bonjol+No.+88,+Karawaci&output=embed"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            aria-hidden="true"
+                        ></iframe>
+                        <div class="contact-map-overlay">
+                            <span>Open in Google&nbsp;Maps</span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
 
