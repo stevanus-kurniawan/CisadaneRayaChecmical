@@ -204,11 +204,69 @@ docker compose -f docker-compose.frontend.yml exec app php artisan config:clear
 
 ## Troubleshooting
 
+### 502 Bad Gateway (http://172.28.92.56:8010/)
+
+**Cause:** Nginx is running but cannot reach the PHP-FPM app container. Usually the **app container never finishes starting** because it waits for PostgreSQL; if the DB is unreachable, PHP-FPM never starts and Nginx returns 502.
+
+**Steps to fix:**
+
+1. **On the frontend server (172.28.92.56), check app container logs:**
+   ```bash
+   cd /opt/crc-app/frontend   # or your app path
+   docker compose -f docker-compose.frontend.yml logs app
+   ```
+   - If you see **"PostgreSQL is unavailable - sleeping"** or **"Could not connect to PostgreSQL at ..."** → the app cannot reach the DB. Go to step 2.
+   - If you see **"PostgreSQL is up"** but still 502 → check that the app container is running: `docker compose -f docker-compose.frontend.yml ps`.
+
+2. **Ensure PostgreSQL is running on the backend server (172.28.92.57):**
+   ```bash
+   ssh user@172.28.92.57
+   cd /opt/crc-app/frontend
+   docker compose -f docker-compose.backend.yml ps
+   # postgres should be "Up" and healthy
+   ```
+
+3. **Ensure firewall on 172.28.92.57 allows the frontend server to the DB port (5002):**
+   ```bash
+   # On 172.28.92.57 (firewalld)
+   sudo firewall-cmd --list-all
+   # Or (ufw): sudo ufw status
+   # Allow: 172.28.92.56 → port 5002 (see Part 1.5 in this doc)
+   ```
+
+4. **Test DB connectivity from the frontend server:**
+   ```bash
+   # On 172.28.92.56
+   nc -zv 172.28.92.57 5002
+   # or: telnet 172.28.92.57 5002
+   ```
+   If this fails, fix firewall or network so 172.28.92.56 can reach 172.28.92.57:5002.
+
+5. **Confirm frontend .env has the correct DB settings:**
+   ```bash
+   # On 172.28.92.56, in frontend/.env
+   DB_HOST=172.28.92.57
+   DB_PORT=5002
+   DB_DATABASE=greenresource
+   DB_USERNAME=postgres
+   DB_PASSWORD=<same as on backend .env.backend>
+   ```
+
+6. **Restart the frontend stack after fixing DB/firewall:**
+   ```bash
+   docker compose -f docker-compose.frontend.yml down
+   docker compose -f docker-compose.frontend.yml up -d
+   docker compose -f docker-compose.frontend.yml logs -f app
+   ```
+   Wait until you see "PostgreSQL is up", then try http://172.28.92.56:8010/ again.
+
+---
+
 - **Frontend cannot connect to DB:**  
   Check firewall on 172.28.92.57 allows 172.28.92.56 to port **5002**; confirm `DB_HOST=172.28.92.57` and `DB_PORT=5002` in frontend `.env`.
 
-- **502 Bad Gateway:**  
-  App container may not be up or not ready. Check `docker compose -f docker-compose.frontend.yml logs app`.
+- **502 after fixing DB:**  
+  Ensure the app container is running: `docker compose -f docker-compose.frontend.yml ps`. If the app container exits, `logs app` will show the error (e.g. DB timeout). The entrypoint now fails after 60s with a clear message if DB is unreachable.
 
 - **Permission errors (storage/bootstrap):**  
   `docker compose -f docker-compose.frontend.yml exec app chown -R www-data:www-data storage bootstrap/cache`
