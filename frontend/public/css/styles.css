@@ -463,8 +463,18 @@ header {
 /* Home: Certifications & Image Panels Section (banner image as background) */
 .home-certifications-section {
   position: relative;
-  padding: 3rem 0 3.5rem;
+  padding: 0 0 3.5rem;
   overflow: hidden;
+}
+
+/* Section separator – centered between hero box and certification logos, equal spacing above/below */
+.home-cert-separator {
+  width: 100%;
+  max-width: 100%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 3rem 0 4rem 0;
+  flex-shrink: 0;
 }
 
 .home-certifications-bg {
@@ -634,11 +644,12 @@ header {
   max-width: 100%;
   margin: 0 auto 1.5rem;
   background: var(--brand-white);
-  border-radius: 0;
+  border-radius: 1rem;
   padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .home-cert-logos-row .cert-logos-single {
@@ -786,6 +797,112 @@ header {
   box-shadow: 0 0 0 2px var(--brand-primary);
 }
 
+.home-certificate-slot-clickable {
+  cursor: pointer;
+}
+
+/* Certificate preview lightbox */
+.cert-preview-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.cert-preview-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cert-preview-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+
+.cert-preview-content {
+  position: relative;
+  z-index: 1;
+  max-width: 95vw;
+  max-height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.cert-preview-img {
+  max-width: 100%;
+  max-height: 95vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+}
+
+.cert-preview-arrow {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--brand-white);
+  background: var(--brand-primary);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 153, 68, 0.35);
+}
+
+.cert-preview-arrow:hover {
+  background: #007a3a;
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(0, 153, 68, 0.4);
+}
+
+.cert-preview-close {
+  position: absolute;
+  top: -2.5rem;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--brand-white);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+
+.cert-preview-close:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .cert-preview-content {
+    gap: 0.25rem;
+    padding: 0 0.5rem;
+  }
+  .cert-preview-arrow {
+    width: 44px;
+    height: 44px;
+    font-size: 1.25rem;
+  }
+}
+
 .image-placeholder {
   aspect-ratio: 1;
   background: linear-gradient(135deg, rgba(0, 153, 68, 0.1) 0%, rgba(33, 145, 123, 0.05) 100%);
@@ -856,6 +973,11 @@ header {
   max-width: 1100px;
 }
 
+/* Tighter vertical padding so text aligns proportionally with image */
+.sustainability-intro-section .green-box.sustainability-hero {
+  padding: 2rem 3rem;
+}
+
 .sustainability-hero {
   text-align: left;
 }
@@ -874,9 +996,13 @@ header {
   display: block;
 }
 
+.sustainability-hero-content {
+  height: auto;
+}
+
 .sustainability-hero-text {
-  font-size: 1rem;
-  line-height: 1.8;
+  font-size: 1.2rem;
+  line-height: 1.6;
   color: var(--brand-primary);
   margin: 0;
 }
@@ -2641,6 +2767,10 @@ footer {
 
   .home-certifications-section {
     padding: 2rem 0 2.5rem;
+  }
+
+  .home-cert-separator {
+    margin: 2rem 0 2.75rem 0;
   }
 
   .home-cert-logos-row {

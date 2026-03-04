@@ -94,7 +94,7 @@ return [
     'company.sustainability.meta_description' => 'Learn about Cisadane Raya Chemical sustainability commitments and certifications.',
     'company.sustainability.sdg_alt' => 'Sustainable Development Goals',
     'company.sustainability.hero_text' => 'Since its establishment, PT Cisadane Raya Chemicals has believed that true progress is built together with the communities around us. As we carry out our operations, CRC grows alongside local communities, sharing responsibility, connection, and mutual care.',
-    'company.sustainability.card1_text' => 'CRC\'s sustainability approach is built on three pillars: Environmental Responsibility, Social Responsibility, and Governance & Integrity. These form the foundation of CRC\'s Sustainability Policy Version 2, which strengthens our commitment to responsible downstream processing and sustainable supply chains.',
+    'company.sustainability.card1_text' => 'CRC is committed to responsible sourcing, ethical business practices, and environmental stewardship. Our Sustainability Policy provides the framework for managing environmental, social, and governance responsibilities cross refinery operations while supporting a transparent and traceable supply chain',
     'company.sustainability.card1_label' => 'Sustainability Policy',
     'company.sustainability.card2_text' => 'CRC is committed to ensuring raw materials originate from reputable and transparent supply chains. As part of our responsible sourcing practices, CRC maintains a Deforestation-Free Supply Chain and works only with suppliers verified as not contributing to deforestation.',
     'company.sustainability.card2_label' => 'Our Sourcing Approach',
