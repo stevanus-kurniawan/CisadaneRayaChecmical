@@ -57,13 +57,15 @@ nano .env.backend
 
 ### 1.4 Start PostgreSQL
 
+**Important:** Backend compose reads variables from **`.env.backend`** only when you pass `--env-file .env.backend`. Without it, `DB_PASSWORD` is blank and Postgres may start with an empty password.
+
 ```bash
-# Use the backend-only compose file
+# Always use --env-file .env.backend for every backend compose command
 docker compose -f docker-compose.backend.yml --env-file .env.backend up -d
 
-# Check container and health
-docker compose -f docker-compose.backend.yml ps
-docker compose -f docker-compose.backend.yml logs -f postgres
+# Check container and health (must use same --env-file)
+docker compose -f docker-compose.backend.yml --env-file .env.backend ps
+docker compose -f docker-compose.backend.yml --env-file .env.backend logs -f postgres
 ```
 
 ### 1.5 Open firewall (if applicable)
