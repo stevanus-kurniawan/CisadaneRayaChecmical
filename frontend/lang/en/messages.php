@@ -33,6 +33,16 @@ return [
     'home.certifications_fallback' => 'Certifications',
     'home.rspo_alt' => 'RSPO Certificate – PT. Cisadane Raya Chemical',
     'home.rspo_fallback' => 'RSPO Certificate',
+    'home.certificates_more' => 'More',
+    'home.certificates_close' => 'Close',
+    'home.carousel_prev' => 'Previous certificate',
+    'home.carousel_next' => 'Next certificate',
+    'home.cert_iso9001' => 'Certificate ISO 9001:2015 – PT. Cisadane Raya Chemical',
+    'home.cert_gmp_fsa' => 'Certificate GMP+ Feed Safety Assurance – PT. Cisadane Raya Chemical',
+    'home.cert_eu_iscc' => 'Certificate EU-ISCC – PT. Cisadane Raya Chemical',
+    'home.cert_fssc' => 'Certificate FSSC 22000 – PT. Cisadane Raya Chemical',
+    'home.cert_halal' => 'Certificate Halal – PT. Cisadane Raya Chemical',
+    'home.cert_rspo' => 'Certificate RSPO – PT. Cisadane Raya Chemical',
     'home.cert_tagline' => 'Turning nature\'s versatility into palm-based food products and advanced oleochemicals',
 
     // Products index

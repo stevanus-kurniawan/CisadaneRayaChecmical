@@ -521,7 +521,7 @@ header {
 }
 
 .cert-logos-img {
-  max-width: 100%;
+  max-width: 150%;
   max-height: 100%;
   min-height: 200px;
   width: auto;
@@ -609,11 +609,181 @@ header {
   color: var(--brand-white);
   font-size: 1.1rem;
   line-height: 1.5;
-  margin: 0;
+  margin: 2.5rem 0 0;
   max-width: 720px;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 0.5rem;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Home: certification logos row (under green box) */
+.home-cert-logos-row {
+  max-width: 100%;
+  margin: 0 auto 1.5rem;
+  background: var(--brand-white);
+  border-radius: 0;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-cert-logos-row .cert-logos-single {
+  min-height: 140px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-cert-logos-row .cert-logos-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 200px;
+  min-height: 100px;
+  object-fit: contain;
+  object-position: center;
+  /* Scale up so logos fill the box but avoid cropping (e.g. rightmost SMETA/Sedex) */
+  transform: scale(1.15);
+}
+
+/* Home: certificates carousel (always visible, one slide at a time) */
+.home-certificates-carousel-wrap {
+  margin-top: 2rem;
+}
+
+.home-certificates-carousel {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 4rem;
+  background: var(--brand-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.home-cert-carousel-inner {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.home-cert-carousel-track {
+  display: flex;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.home-cert-carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  min-height: 420px;
+}
+
+.home-certificate-slot {
+  width: 100%;
+  min-height: 380px;
+  height: 100%;
+  max-height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafafa;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 3px solid var(--brand-primary);
+  box-sizing: border-box;
+}
+
+.home-certificate-slot .cert-certificate-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Carousel arrows – prominent, easy to click */
+.home-cert-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--brand-white);
+  background: var(--brand-primary);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 153, 68, 0.35);
+}
+
+.home-cert-carousel-arrow:hover:not(:disabled) {
+  background: #007a3a;
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 6px 20px rgba(0, 153, 68, 0.4);
+}
+
+.home-cert-carousel-arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.home-cert-carousel-prev {
+  left: 1rem;
+}
+
+.home-cert-carousel-next {
+  right: 1rem;
+}
+
+/* Dot indicators */
+.home-cert-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.home-cert-carousel-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.home-cert-carousel-dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: scale(1.2);
+}
+
+.home-cert-carousel-dot.is-active {
+  background: var(--brand-white);
+  transform: scale(1.2);
+  box-shadow: 0 0 0 2px var(--brand-primary);
 }
 
 .image-placeholder {
@@ -2473,37 +2643,51 @@ footer {
     padding: 2rem 0 2.5rem;
   }
 
-  .certifications-panels {
-    flex-direction: column;
-    min-height: auto;
-    margin-bottom: 2rem;
+  .home-cert-logos-row {
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
   }
 
-  .cert-panel-divider {
-    width: 100%;
-    height: 4px;
-    margin: 0.5rem 0;
+  .home-cert-logos-row .cert-logos-single {
+    min-height: 100px;
   }
 
-  .section + .home-certifications-section .cert-panel-divider {
-    margin-top: 0;
-    height: 4px;
+  .home-cert-logos-row .cert-logos-img {
+    max-height: 120px;
+    min-height: 60px;
+    transform: scale(1.05);
   }
 
-  .cert-logos-single {
-    min-height: 220px;
+  .home-certificate-slot {
+    min-height: 280px;
+    max-height: 400px;
   }
 
-  .cert-logos-img {
-    min-height: 160px;
+  .home-certificates-carousel {
+    padding: 1rem 2.5rem;
   }
 
-  .cert-panel-image {
+  .home-cert-carousel-slide {
     min-height: 320px;
   }
 
-  .cert-image-slot {
-    max-height: 380px;
+  .home-cert-carousel-slide .home-certificate-slot {
+    min-height: 320px;
+    max-height: 440px;
+  }
+
+  .home-cert-carousel-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+
+  .home-cert-carousel-prev {
+    left: 0.25rem;
+  }
+
+  .home-cert-carousel-next {
+    right: 0.25rem;
   }
 
   .home-certifications-tagline {
