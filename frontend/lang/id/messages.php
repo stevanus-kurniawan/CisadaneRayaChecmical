@@ -33,6 +33,16 @@ return [
     'home.certifications_fallback' => 'Sertifikasi',
     'home.rspo_alt' => 'Sertifikat RSPO – PT. Cisadane Raya Chemical',
     'home.rspo_fallback' => 'Sertifikat RSPO',
+    'home.certificates_more' => 'Lainnya',
+    'home.certificates_close' => 'Tutup',
+    'home.carousel_prev' => 'Sertifikat sebelumnya',
+    'home.carousel_next' => 'Sertifikat berikutnya',
+    'home.cert_iso9001' => 'Sertifikat ISO 9001:2015 – PT. Cisadane Raya Chemical',
+    'home.cert_gmp_fsa' => 'Sertifikat GMP+ Feed Safety Assurance – PT. Cisadane Raya Chemical',
+    'home.cert_eu_iscc' => 'Sertifikat EU-ISCC – PT. Cisadane Raya Chemical',
+    'home.cert_fssc' => 'Sertifikat FSSC 22000 – PT. Cisadane Raya Chemical',
+    'home.cert_halal' => 'Sertifikat Halal – PT. Cisadane Raya Chemical',
+    'home.cert_rspo' => 'Sertifikat RSPO – PT. Cisadane Raya Chemical',
     'home.cert_tagline' => 'Mengubah ke serbaguna alam menjadi produk pangan berbasis sawit dan oleokimia canggih',
 
     // Products index
