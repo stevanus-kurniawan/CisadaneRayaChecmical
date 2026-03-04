@@ -129,5 +129,6 @@
 
     <script src="{{ asset('js/main.js') }}"></script>
     @stack('scripts')
+    @stack('modals')
 </body>
 </html>
