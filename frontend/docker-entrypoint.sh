@@ -2,10 +2,26 @@
 
 set -e
 
-echo "Waiting for PostgreSQL to be ready..."
-until PGPASSWORD=${DB_PASSWORD:-postgres123} psql -h ${DB_HOST:-postgres} -U ${DB_USERNAME:-postgres} -d postgres -c '\q' 2>/dev/null; do
-  >&2 echo "PostgreSQL is unavailable - sleeping"
+# Give network/backend a moment to be reachable (avoids "unavailable" when connection actually works later)
+echo "Waiting 5s for network to be ready..."
+sleep 5
+
+echo "Waiting for PostgreSQL to be ready at ${DB_HOST:-postgres}:${DB_PORT:-5432}..."
+DB_WAIT_MAX=90
+DB_WAIT=0
+until PGPASSWORD=${DB_PASSWORD:-postgres123} psql -h ${DB_HOST:-postgres} -p ${DB_PORT:-5432} -U ${DB_USERNAME:-postgres} -d postgres -c '\q' 2>/dev/null; do
+  >&2 echo "PostgreSQL is unavailable - sleeping (${DB_WAIT}s/${DB_WAIT_MAX}s)"
+  # On first failure, show the real psql error to help debug
+  if [ "$DB_WAIT" -eq 1 ]; then
+    >&2 echo "Connection attempt failed with:"
+    PGPASSWORD=${DB_PASSWORD:-postgres123} psql -h ${DB_HOST:-postgres} -p ${DB_PORT:-5432} -U ${DB_USERNAME:-postgres} -d postgres -c '\q' 2>&1 || true
+  fi
   sleep 1
+  DB_WAIT=$((DB_WAIT + 1))
+  if [ "$DB_WAIT" -ge "$DB_WAIT_MAX" ]; then
+    >&2 echo "ERROR: Could not connect to PostgreSQL at ${DB_HOST:-postgres}:${DB_PORT:-5432} after ${DB_WAIT_MAX}s. Check: 1) DB is running on backend server, 2) Firewall allows frontend server to DB port, 3) DB_HOST/DB_PORT in .env."
+    exit 1
+  fi
 done
 
 >&2 echo "PostgreSQL is up - executing command"

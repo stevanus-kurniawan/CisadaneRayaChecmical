@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Products – Cisadane Raya Chemical')
-@section('description', 'Explore our range of sustainable products including feedstocks, methyl ester, and other solutions.')
+@section('title', __('messages.products.meta_title'))
+@section('description', __('messages.products.meta_description'))
 
 @section('content')
 {{-- Section 1: Banner --}}
@@ -19,72 +19,59 @@
 {{-- Section 2: Portfolio Hero + Product Grid --}}
 <section class="section">
     <div class="container">
-        {{-- Hero card, same styling as green-box on home --}}
         <div class="green-box products-portfolio-hero">
-            <h2 class="green-box-title">Our High-Quality Oleochemical Portfolio</h2>
+            <h2 class="green-box-title">{{ __('messages.products.portfolio_title') }}</h2>
         </div>
 
-        {{-- Three-product portfolio grid --}}
         <div class="products-portfolio-grid">
-            {{-- Palm Oil --}}
             <article class="products-portfolio-card">
                 <div class="products-portfolio-image">
                     <x-app-image 
                         src="{{ asset('assets/images/feedstocks-palm-oil.png') }}" 
-                        alt="Palm Oil"
+                        alt="{{ __('messages.products.palm_oil') }}"
                         fill
                         sizes="(max-width: 768px) 100vw, 33vw"
                     />
                 </div>
-                <h3 class="products-portfolio-title">Palm Oil</h3>
+                <h3 class="products-portfolio-title">{{ __('messages.products.palm_oil') }}</h3>
                 <ul class="products-portfolio-list">
-                    <li>RBD Palm Oil</li>
-                    <li>RBD Palm Olein</li>
-                    <li>RBD Palm Stearin</li>
-                    <li>Crude Palm Oil - CPO</li>
-                    <li>Crude Palm Kernel Oil - CPKO</li>
-                    <li>Palm Fatty Acid Distillate - PFAD</li>
-                    <li>RBD Palm Kernel Olein</li>
+                    @foreach(__('messages.products.palm_oil_items') as $item)
+                        <li>{{ $item }}</li>
+                    @endforeach
                 </ul>
             </article>
 
-            {{-- Glycerin --}}
             <article class="products-portfolio-card">
                 <div class="products-portfolio-image">
                     <x-app-image 
                         src="{{ asset('assets/images/methyl-ester.png') }}" 
-                        alt="Glycerin"
+                        alt="{{ __('messages.products.glycerin') }}"
                         fill
                         sizes="(max-width: 768px) 100vw, 33vw"
                     />
                 </div>
-                <h3 class="products-portfolio-title">Glycerin</h3>
+                <h3 class="products-portfolio-title">{{ __('messages.products.glycerin') }}</h3>
                 <ul class="products-portfolio-list">
-                    <li>Refined Glycerine 99.7% Min</li>
-                    <li>Refined Glycerine 99.5% Min</li>
-                    <li>Crude Glycerine 80% Min</li>
+                    @foreach(__('messages.products.glycerin_items') as $item)
+                        <li>{{ $item }}</li>
+                    @endforeach
                 </ul>
             </article>
 
-            {{-- Fatty Acid --}}
             <article class="products-portfolio-card">
                 <div class="products-portfolio-image">
                     <x-app-image 
-                        src="{{ asset('assets/images/others.jpeg') }}" 
-                        alt="Fatty Acid"
+                        src="{{ asset('assets/images/others.png') }}" 
+                        alt="{{ __('messages.products.fatty_acid') }}"
                         fill
                         sizes="(max-width: 768px) 100vw, 33vw"
                     />
                 </div>
-                <h3 class="products-portfolio-title">Fatty Acid</h3>
+                <h3 class="products-portfolio-title">{{ __('messages.products.fatty_acid') }}</h3>
                 <ul class="products-portfolio-list">
-                    <li>Lauric Acid C12-99% Min</li>
-                    <li>Myristic Acid C14-99% Min</li>
-                    <li>Palmitic Acid C16-98% Min</li>
-                    <li>Stearic Acid C18-38% Min</li>
-                    <li>Strearic Acid C18-45% Min</li>
-                    <li>Rubber grade Stearic Acid</li>
-                    <li>Oleic Acid 75% Min</li>
+                    @foreach(__('messages.products.fatty_acid_items') as $item)
+                        <li>{{ $item }}</li>
+                    @endforeach
                 </ul>
             </article>
         </div>
