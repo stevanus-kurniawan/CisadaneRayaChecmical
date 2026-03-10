@@ -16,8 +16,8 @@
     <meta name="theme-color" content="#2d5016" />
     <meta name="msapplication-TileColor" content="#2d5016" />
     
-    <link rel="stylesheet" href="{{ asset('css/tokens.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/tokens.css') }}?v={{ config('app.asset_version', '1') }}" />
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}?v={{ config('app.asset_version', '1') }}" />
     
     {{-- Preload critical banner images for current page --}}
     @if(request()->routeIs('home'))
@@ -127,7 +127,7 @@
         </div>
     </footer>
 
-    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}?v={{ config('app.asset_version', '1') }}"></script>
     @stack('scripts')
     @stack('modals')
 </body>

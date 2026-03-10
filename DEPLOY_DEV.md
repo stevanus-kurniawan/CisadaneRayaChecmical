@@ -178,6 +178,31 @@ docker compose -f docker-compose.frontend.yml exec app php artisan config:clear
 - Open: `http://172.28.92.56:8010`
 - Admin (if seeded): `http://172.28.92.56:8010/admin/login`
 
+### 2.8 After each frontend deploy (so users see the latest version)
+
+Cache can make users see old CSS/JS or pages after you deploy. Do this **after every frontend deploy** on the frontend server:
+
+1. **Clear Laravel caches** (so new views/config are used):
+   ```bash
+   docker compose -f docker-compose.frontend.yml exec app php artisan view:clear
+   docker compose -f docker-compose.frontend.yml exec app php artisan config:clear
+   docker compose -f docker-compose.frontend.yml exec app php artisan cache:clear
+   ```
+
+2. **Bump asset version** so browsers fetch new CSS/JS instead of cached:
+   - In `frontend/.env` set or increase: `APP_ASSET_VERSION=2` (use a new number or timestamp each deploy, e.g. `APP_ASSET_VERSION=20260304`).
+   - Restart the app so it reads the new value:  
+     `docker compose -f docker-compose.frontend.yml restart app`
+
+Optional one-liner after deploy (from `frontend/`):
+```bash
+docker compose -f docker-compose.frontend.yml exec app php artisan view:clear && \
+docker compose -f docker-compose.frontend.yml exec app php artisan config:clear && \
+docker compose -f docker-compose.frontend.yml exec app php artisan cache:clear && \
+docker compose -f docker-compose.frontend.yml restart app
+```
+(Ensure `.env` has a new `APP_ASSET_VERSION` before running.)
+
 ---
 
 ## Part 3: Summary checklist
