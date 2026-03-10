@@ -16,13 +16,13 @@
     <meta name="msapplication-TileColor" content="#2d5016" />
     <meta name="msapplication-config" content="{{ asset('browserconfig.xml') }}" />
     
-    <link rel="stylesheet" href="{{ asset('css/tokens.css') }}?v={{ config('app.asset_version', '1') }}" />
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}?v={{ config('app.asset_version', '1') }}" />
+    <link rel="stylesheet" href="{{ asset('css/tokens.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}" />
     @stack('styles')
 </head>
 <body>
     @yield('content')
-    <script src="{{ asset('js/main.js') }}?v={{ config('app.asset_version', '1') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
     @stack('scripts')
 </body>
 </html>

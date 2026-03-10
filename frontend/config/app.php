@@ -41,15 +41,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Asset version (cache busting)
-    |--------------------------------------------------------------------------
-    | Bump this (e.g. in .env APP_ASSET_VERSION) on each frontend deploy so
-    | browsers fetch new CSS/JS instead of serving from cache.
-    */
-    'asset_version' => env('APP_ASSET_VERSION', '1'),
-
-    /*
-    |--------------------------------------------------------------------------
     | Application Timezone
     |--------------------------------------------------------------------------
     */
