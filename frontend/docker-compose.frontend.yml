@@ -17,7 +17,7 @@ services:
     environment:
       - DB_HOST=${BACKEND_DB_HOST:-172.28.92.57}
       - DB_PORT=${BACKEND_DB_PORT:-5002}
-      - DB_DATABASE=${DB_DATABASE:-greenresource}
+      - DB_DATABASE=${DB_DATABASE:-crc}
       - DB_USERNAME=${DB_USERNAME:-postgres}
       - DB_PASSWORD=${DB_PASSWORD}
     volumes:

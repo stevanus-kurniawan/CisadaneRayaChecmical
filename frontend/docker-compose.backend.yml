@@ -7,7 +7,7 @@ services:
     container_name: crc_dev_postgres
     restart: unless-stopped
     environment:
-      POSTGRES_DB: greenresource
+      POSTGRES_DB: crc
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       PGDATA: /var/lib/postgresql/data/pgdata
