@@ -89,6 +89,13 @@ Route::post('/contact', [App\Http\Controllers\ContactController::class, 'submit'
 
 // Admin Routes
 Route::prefix('admin')->group(function () {
+    // Redirect /admin to login or dashboard
+    Route::get('/', function () {
+        return auth()->check()
+            ? redirect()->route('admin.dashboard')
+            : redirect()->route('admin.login');
+    })->name('admin');
+
     Route::get('/login', function () {
         return view('admin.login');
     })->name('admin.login');

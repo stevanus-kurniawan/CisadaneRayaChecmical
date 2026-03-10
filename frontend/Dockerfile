@@ -28,6 +28,9 @@ RUN sed -i 's/\r$//' /usr/local/bin/docker-entrypoint.sh && chmod +x /usr/local/
 # Copy PHP OPcache configuration
 COPY docker/php/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
 
+# PHP-FPM: listen on all interfaces so nginx (another container) can connect
+RUN sed -i 's/^listen = 127.0.0.1:9000/listen = 9000/' /usr/local/etc/php-fpm.d/www.conf
+
 # Create OPcache directory (will be created in entrypoint with proper permissions)
 
 # Copy existing application directory contents
