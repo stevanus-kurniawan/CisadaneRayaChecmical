@@ -8,7 +8,7 @@ $banner = [
 ];
 @endphp
 
-@section('title', 'Methyl Ester – Cisadane Raya Chemical')
+@section('title', 'Methyl Ester – Cisadane Raya Chemicals')
 @section('description', 'Discover our premium methyl ester products for various applications.')
 
 @section('content')

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Careers – Cisadane Raya Chemical')
-@section('description', 'Explore career opportunities at Cisadane Raya Chemical.')
+@section('title', 'Careers – Cisadane Raya Chemicals')
+@section('description', 'Explore career opportunities at Cisadane Raya Chemicals.')
 
 @section('content')
 <section class="section">
@@ -10,7 +10,7 @@
             <div class="section-kicker">Careers</div>
             <h1 class="section-title">Join our team</h1>
             <p class="section-description">
-                Cisadane Raya Chemical offers opportunities for growth, impact, and professional development.
+                Cisadane Raya Chemicals offers opportunities for growth, impact, and professional development.
                 This section can be static or CMS-driven, with optional integration for job listings.
             </p>
         </div>

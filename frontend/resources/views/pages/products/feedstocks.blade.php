@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Feedstocks – Cisadane Raya Chemical')
+@section('title', 'Feedstocks – Cisadane Raya Chemicals')
 @section('description', 'Explore our sustainable feedstock products including POME, UCO, EFBO, and SBEO.')
 
 @section('content')

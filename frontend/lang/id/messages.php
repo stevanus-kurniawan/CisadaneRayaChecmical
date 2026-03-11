@@ -2,8 +2,8 @@
 
 return [
     // Meta & default
-    'meta.default_title' => 'Cisadane Raya Chemical – Situs Perusahaan & CMS',
-    'meta.default_description' => 'Cisadane Raya Chemical adalah organisasi modern dan berkelanjutan dengan situs perusahaan dan CMS yang dirancang untuk kejelasan, kredibilitas, dan keterlibatan.',
+    'meta.default_title' => 'Cisadane Raya Chemicals – Situs Perusahaan & CMS',
+    'meta.default_description' => 'Cisadane Raya Chemicals adalah organisasi modern dan berkelanjutan dengan situs perusahaan dan CMS yang dirancang untuk kejelasan, kredibilitas, dan keterlibatan.',
 
     // Nav
     'nav.home' => 'Beranda',
@@ -21,32 +21,32 @@ return [
     'footer.about_us' => 'Tentang Kami',
     'footer.products' => 'Produk',
     'footer.contact' => 'Kontak',
-    'footer.copyright' => ':year Cisadane Raya Chemical. Hak cipta dilindungi.',
+    'footer.copyright' => ':year Cisadane Raya Chemicals. Hak cipta dilindungi.',
 
     // Home
-    'home.meta_title' => 'Cisadane Raya Chemical – Ringkasan',
-    'home.meta_description' => 'Cisadane Raya Chemical adalah organisasi berkelanjutan terkemuka yang berkomitmen pada keunggulan dan tanggung jawab lingkungan.',
+    'home.meta_title' => 'Cisadane Raya Chemicals – Ringkasan',
+    'home.meta_description' => 'Cisadane Raya Chemicals adalah organisasi berkelanjutan terkemuka yang berkomitmen pada keunggulan dan tanggung jawab lingkungan.',
     'home.hero_title' => 'Menjaga Kehidupan Manusia Melalui Hasil Kelapa Sawit Sejak 1975',
     'home.hero_text' => 'Memberikan unsur-unsur penting yang mendukung kehidupan manusia, lahir dari alam, disempurnakan dengan penuh perhatian, dan diwujudkan melalui rantai tangan yang berkomitmen pada tanggung jawab dan kepedulian.',
     'home.learn_more' => 'PELAJARI LEBIH LANJUT TENTANG KAMI',
     'home.certifications_alt' => 'Sertifikasi: RSPO, ISO 9001, GMP+, Halal Indonesia, ISCC, FSSC 22000, SMETA Sedex',
     'home.certifications_fallback' => 'Sertifikasi',
-    'home.rspo_alt' => 'Sertifikat RSPO – PT. Cisadane Raya Chemical',
+    'home.rspo_alt' => 'Sertifikat RSPO – PT. Cisadane Raya Chemicals',
     'home.rspo_fallback' => 'Sertifikat RSPO',
     'home.certificates_more' => 'Lainnya',
     'home.certificates_close' => 'Tutup',
     'home.carousel_prev' => 'Sertifikat sebelumnya',
     'home.carousel_next' => 'Sertifikat berikutnya',
-    'home.cert_iso9001' => 'Sertifikat ISO 9001:2015 – PT. Cisadane Raya Chemical',
-    'home.cert_gmp_fsa' => 'Sertifikat GMP+ Feed Safety Assurance – PT. Cisadane Raya Chemical',
-    'home.cert_eu_iscc' => 'Sertifikat EU-ISCC – PT. Cisadane Raya Chemical',
-    'home.cert_fssc' => 'Sertifikat FSSC 22000 – PT. Cisadane Raya Chemical',
-    'home.cert_halal' => 'Sertifikat Halal – PT. Cisadane Raya Chemical',
-    'home.cert_rspo' => 'Sertifikat RSPO – PT. Cisadane Raya Chemical',
+    'home.cert_iso9001' => 'Sertifikat ISO 9001:2015 – PT. Cisadane Raya Chemicals',
+    'home.cert_gmp_fsa' => 'Sertifikat GMP+ Feed Safety Assurance – PT. Cisadane Raya Chemicals',
+    'home.cert_eu_iscc' => 'Sertifikat EU-ISCC – PT. Cisadane Raya Chemicals',
+    'home.cert_fssc' => 'Sertifikat FSSC 22000 – PT. Cisadane Raya Chemicals',
+    'home.cert_halal' => 'Sertifikat Halal – PT. Cisadane Raya Chemicals',
+    'home.cert_rspo' => 'Sertifikat RSPO – PT. Cisadane Raya Chemicals',
     'home.cert_tagline' => 'Mengubah ke serbaguna alam menjadi produk pangan berbasis sawit dan oleokimia canggih',
 
     // Products index
-    'products.meta_title' => 'Produk – Cisadane Raya Chemical',
+    'products.meta_title' => 'Produk – Cisadane Raya Chemicals',
     'products.meta_description' => 'Jelajahi rangkaian produk berkelanjutan kami termasuk bahan baku, metil ester, dan solusi lainnya.',
     'products.portfolio_title' => 'Portofolio Oleokimia Berkualitas Tinggi Kami',
     'products.palm_oil' => 'Minyak Sawit',
@@ -77,8 +77,8 @@ return [
     ],
 
     // Company - About
-    'company.about.meta_title' => 'Tentang Kami – Cisadane Raya Chemical',
-    'company.about.meta_description' => 'Kenali Cisadane Raya Chemical: misi, visi, dan komitmen kami terhadap keberlanjutan.',
+    'company.about.meta_title' => 'Tentang Kami – Cisadane Raya Chemicals',
+    'company.about.meta_description' => 'Kenali Cisadane Raya Chemicals: misi, visi, dan komitmen kami terhadap keberlanjutan.',
     'company.about.hero_title' => '"Menjaga Kehidupan Manusia Melalui Hasil Kelapa Sawit Sejak 1975"',
     'company.about.hero_paragraph1' => 'Selama berabad-abad, kelapa sawit telah mendukung peradaban manusia dengan menyediakan pangan, mendukung rumah tangga, dan menggerakkan industri yang membentuk kehidupan modern. Sejak 1975, PT Cisadane Raya Chemicals melanjutkan warisan ini dengan mengubah sumber daya berbasis sawit menjadi minyak makan olahan dan solusi oleokimia yang menyentuh kehidupan sehari-hari di berbagai budaya dan benua.',
     'company.about.hero_paragraph2' => 'Berakar di Indonesia dan terhubung dengan pasar global, CRC menggabungkan puluhan tahun keahlian hilir dengan proses yang tertib dan operasi yang berorientasi kualitas. Produk kami melayani produsen makanan, merek perawatan pribadi, produsen perawatan rumah, dan mitra industri dengan menyediakan bahan penting yang mendukung keamanan, fungsi, dan keandalan di seluruh rantai nilai.',
@@ -90,8 +90,8 @@ return [
     'company.about.our_commitment_text' => 'CRC beroperasi dengan fokus kuat pada pengolahan yang bertanggung jawab, kepatuhan regulasi, dan peningkatan berkelanjutan untuk memenuhi kebutuhan pelanggan, persyaratan keberlanjutan, dan harapan rantai pasok global.',
 
     // Company - Sustainability
-    'company.sustainability.meta_title' => 'Berkelanjutan – Cisadane Raya Chemical',
-    'company.sustainability.meta_description' => 'Pelajari komitmen dan sertifikasi keberlanjutan Cisadane Raya Chemical.',
+    'company.sustainability.meta_title' => 'Berkelanjutan – Cisadane Raya Chemicals',
+    'company.sustainability.meta_description' => 'Pelajari komitmen dan sertifikasi keberlanjutan Cisadane Raya Chemicals.',
     'company.sustainability.sdg_alt' => 'Tujuan Pembangunan Berkelanjutan',
     'company.sustainability.hero_text' => 'Sejak didirikan, PT Cisadane Raya Chemicals percaya bahwa kemajuan sejati dibangun bersama masyarakat di sekitar kita. Dalam menjalankan operasi kami, CRC tumbuh bersama masyarakat setempat, berbagi tanggung jawab, keterhubungan, dan kepedulian bersama.',
     'company.sustainability.card1_text' => 'Pendekatan keberlanjutan <strong>CRC</strong> dibangun atas tiga pilar: Tanggung Jawab Lingkungan, Tanggung Jawab Sosial, serta Tata Kelola & Integritas. Ini menjadi fondasi Kebijakan Keberlanjutan CRC Versi 2, yang memperkuat komitmen kami pada pengolahan hilir yang bertanggung jawab dan rantai pasok berkelanjutan.',
@@ -104,8 +104,8 @@ return [
     'company.sustainability.card4_label' => 'Tanggung Jawab Sosial Perusahaan',
 
     // Contact
-    'contact.meta_title' => 'Hubungi Kami – Cisadane Raya Chemical',
-    'contact.meta_description' => 'Hubungi Cisadane Raya Chemical untuk pertanyaan perusahaan, kemitraan, atau keberlanjutan.',
+    'contact.meta_title' => 'Hubungi Kami – Cisadane Raya Chemicals',
+    'contact.meta_description' => 'Hubungi Cisadane Raya Chemicals untuk pertanyaan perusahaan, kemitraan, atau keberlanjutan.',
     'contact.heading' => 'HUBUNGI<br>KAMI',
     'contact.intro' => 'Hubungi tim kami untuk mengeksplorasi peluang kolaborasi. Kami menantikan kabar dari Anda dan akan merespons secepat mungkin.',
     'contact.address_line1' => 'Samsung Hub',

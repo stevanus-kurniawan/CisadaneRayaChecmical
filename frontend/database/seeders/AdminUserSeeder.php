@@ -25,7 +25,7 @@ class AdminUserSeeder extends Seeder
         User::updateOrCreate(
             ['email' => 'admin@cisadane.co.id'],
             [
-                'name' => 'Cisadane Raya Chemical Admin',
+                'name' => 'Cisadane Raya Chemicals Admin',
                 'password' => Hash::make('admin123'), // Change this in production!
                 'role' => 'admin',
             ]

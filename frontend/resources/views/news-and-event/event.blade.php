@@ -8,8 +8,8 @@ $banner = [
 ];
 @endphp
 
-@section('title', 'Events – Cisadane Raya Chemical')
-@section('description', 'Discover upcoming events and past event highlights from Cisadane Raya Chemical.')
+@section('title', 'Events – Cisadane Raya Chemicals')
+@section('description', 'Discover upcoming events and past event highlights from Cisadane Raya Chemicals.')
 
 @section('content')
 <section class="section">

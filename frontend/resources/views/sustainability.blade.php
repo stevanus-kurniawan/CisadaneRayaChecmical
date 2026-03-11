@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Sustainability / ESG – Cisadane Raya Chemical')
-@section('description', 'Learn about Cisadane Raya Chemical sustainability initiatives and ESG commitments.')
+@section('title', 'Sustainability / ESG – Cisadane Raya Chemicals')
+@section('description', 'Learn about Cisadane Raya Chemicals sustainability initiatives and ESG commitments.')
 
 @section('content')
 <section class="section">
@@ -10,7 +10,7 @@
             <div class="section-kicker">Sustainability &amp; ESG</div>
             <h1 class="section-title">Our commitment to sustainability</h1>
             <p class="section-description">
-                Cisadane Raya Chemical is committed to embedding environmental, social, and governance (ESG)
+                Cisadane Raya Chemicals is committed to embedding environmental, social, and governance (ESG)
                 principles into every aspect of our operations. This section will be fully manageable
                 through the CMS to showcase initiatives, reports, and progress.
             </p>

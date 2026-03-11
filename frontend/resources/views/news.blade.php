@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
-@section('title', 'News & Updates – Cisadane Raya Chemical')
-@section('description', 'Stay updated with the latest news and updates from Cisadane Raya Chemical.')
+@section('title', 'News & Updates – Cisadane Raya Chemicals')
+@section('description', 'Stay updated with the latest news and updates from Cisadane Raya Chemicals.')
 
 @section('content')
 <section class="section">
     <div class="container">
         <div class="section-header">
             <div class="section-kicker">News &amp; Updates</div>
-            <h1 class="section-title">Latest from Cisadane Raya Chemical</h1>
+            <h1 class="section-title">Latest from Cisadane Raya Chemicals</h1>
             <p class="section-description">
                 Stay informed about our latest news, updates, and announcements.
                 This section will be fully manageable through the CMS.

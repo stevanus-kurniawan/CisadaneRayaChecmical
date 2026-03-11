@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'About Us – Cisadane Raya Chemical')
-@section('description', 'Learn about Cisadane Raya Chemical: company overview, vision & mission, and values.')
+@section('title', 'About Us – Cisadane Raya Chemicals')
+@section('description', 'Learn about Cisadane Raya Chemicals: company overview, vision & mission, and values.')
 
 @section('content')
 <section class="section">
@@ -10,7 +10,7 @@
             <div class="section-kicker">Company overview</div>
             <h1 class="section-title">Who we are.</h1>
             <p class="section-description">
-                Cisadane Raya Chemical is a forward-looking organization focused on
+                Cisadane Raya Chemicals is a forward-looking organization focused on
                 sustainable growth, long-term partnerships, and measurable impact
                 for people and planet.
             </p>
@@ -33,7 +33,7 @@
                     </li>
                     <li>
                         <span class="bullet">✓</span>
-                        <span>Mission: how Cisadane Raya Chemical creates sustainable value.</span>
+                        <span>Mission: how Cisadane Raya Chemicals creates sustainable value.</span>
                     </li>
                 </ul>
             </div>

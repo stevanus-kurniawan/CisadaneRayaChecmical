@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $categoryTitle . ' – Cisadane Raya Chemical')
+@section('title', $categoryTitle . ' – Cisadane Raya Chemicals')
 @section('description', 'Explore our ' . strtolower($categoryTitle) . ' products and solutions.')
 
 @section('content')

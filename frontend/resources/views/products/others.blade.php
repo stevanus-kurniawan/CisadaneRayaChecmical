@@ -8,7 +8,7 @@ $banner = [
 ];
 @endphp
 
-@section('title', 'Other Products – Cisadane Raya Chemical')
+@section('title', 'Other Products – Cisadane Raya Chemicals')
 @section('description', 'Explore our additional product solutions and services.')
 
 @section('content')

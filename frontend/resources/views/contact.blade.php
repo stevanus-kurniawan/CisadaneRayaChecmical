@@ -8,8 +8,8 @@ $banner = [
 ];
 @endphp
 
-@section('title', 'Contact Us – Cisadane Raya Chemical')
-@section('description', 'Get in touch with Cisadane Raya Chemical for corporate, partnership, or sustainability inquiries.')
+@section('title', 'Contact Us – Cisadane Raya Chemicals')
+@section('description', 'Get in touch with Cisadane Raya Chemicals for corporate, partnership, or sustainability inquiries.')
 
 @section('content')
 <section class="section">
@@ -18,7 +18,7 @@ $banner = [
             <div class="section-kicker">Contact us</div>
             <h1 class="section-title">We'd love to hear from you.</h1>
             <p class="section-description">
-                Use this form to reach Cisadane Raya Chemical for corporate,
+                Use this form to reach Cisadane Raya Chemicals for corporate,
                 partnership, or sustainability-related inquiries. Your message
                 will be routed to the right team, logged, and handled with care.
             </p>
@@ -152,7 +152,7 @@ $banner = [
                 </div>
 
                 <p class="form-note">
-                    By submitting this form you agree that Cisadane Raya Chemical may
+                    By submitting this form you agree that Cisadane Raya Chemicals may
                     store and process the information provided for the purpose of
                     responding to your inquiry.
                 </p>

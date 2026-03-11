@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Certification Sustainability Report – Cisadane Raya Chemical')
-@section('description', 'Overview of Cisadane Raya Chemical certifications and sustainability reporting across global markets.')
+@section('title', 'Certification Sustainability Report – Cisadane Raya Chemicals')
+@section('description', 'Overview of Cisadane Raya Chemicals certifications and sustainability reporting across global markets.')
 
 @section('content')
 <div class="sustainability-page">

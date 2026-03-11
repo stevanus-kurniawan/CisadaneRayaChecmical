@@ -2,8 +2,8 @@
 
 return [
     // Meta & default
-    'meta.default_title' => 'Cisadane Raya Chemical – Corporate Website & CMS',
-    'meta.default_description' => 'Cisadane Raya Chemical is a modern, sustainable organization with a corporate website and CMS designed for clarity, credibility, and engagement.',
+    'meta.default_title' => 'Cisadane Raya Chemicals – Corporate Website & CMS',
+    'meta.default_description' => 'Cisadane Raya Chemicals is a modern, sustainable organization with a corporate website and CMS designed for clarity, credibility, and engagement.',
 
     // Nav
     'nav.home' => 'Home',
@@ -21,32 +21,32 @@ return [
     'footer.about_us' => 'About Us',
     'footer.products' => 'Products',
     'footer.contact' => 'Contact',
-    'footer.copyright' => ':year Cisadane Raya Chemical. All rights reserved.',
+    'footer.copyright' => ':year Cisadane Raya Chemicals. All rights reserved.',
 
     // Home
-    'home.meta_title' => 'Cisadane Raya Chemical – Overview',
-    'home.meta_description' => 'Cisadane Raya Chemical is a leading sustainable organization committed to excellence and environmental responsibility.',
+    'home.meta_title' => 'Cisadane Raya Chemicals – Overview',
+    'home.meta_description' => 'Cisadane Raya Chemicals is a leading sustainable organization committed to excellence and environmental responsibility.',
     'home.hero_title' => 'Nurturing Human Life Through the Gifts of the Palm Since 1975',
     'home.hero_text' => 'Providing the essential elements that cradle human living, born from nature, refined with care, and carried forward through a chain of hands committed to responsibility and compassion.',
     'home.learn_more' => 'LEARN MORE ABOUT US',
     'home.certifications_alt' => 'Certifications: RSPO, ISO 9001, GMP+, Halal Indonesia, ISCC, FSSC 22000, SMETA Sedex',
     'home.certifications_fallback' => 'Certifications',
-    'home.rspo_alt' => 'RSPO Certificate – PT. Cisadane Raya Chemical',
+    'home.rspo_alt' => 'RSPO Certificate – PT. Cisadane Raya Chemicals',
     'home.rspo_fallback' => 'RSPO Certificate',
     'home.certificates_more' => 'More',
     'home.certificates_close' => 'Close',
     'home.carousel_prev' => 'Previous certificate',
     'home.carousel_next' => 'Next certificate',
-    'home.cert_iso9001' => 'Certificate ISO 9001:2015 – PT. Cisadane Raya Chemical',
-    'home.cert_gmp_fsa' => 'Certificate GMP+ Feed Safety Assurance – PT. Cisadane Raya Chemical',
-    'home.cert_eu_iscc' => 'Certificate EU-ISCC – PT. Cisadane Raya Chemical',
-    'home.cert_fssc' => 'Certificate FSSC 22000 – PT. Cisadane Raya Chemical',
-    'home.cert_halal' => 'Certificate Halal – PT. Cisadane Raya Chemical',
-    'home.cert_rspo' => 'Certificate RSPO – PT. Cisadane Raya Chemical',
+    'home.cert_iso9001' => 'Certificate ISO 9001:2015 – PT. Cisadane Raya Chemicals',
+    'home.cert_gmp_fsa' => 'Certificate GMP+ Feed Safety Assurance – PT. Cisadane Raya Chemicals',
+    'home.cert_eu_iscc' => 'Certificate EU-ISCC – PT. Cisadane Raya Chemicals',
+    'home.cert_fssc' => 'Certificate FSSC 22000 – PT. Cisadane Raya Chemicals',
+    'home.cert_halal' => 'Certificate Halal – PT. Cisadane Raya Chemicals',
+    'home.cert_rspo' => 'Certificate RSPO – PT. Cisadane Raya Chemicals',
     'home.cert_tagline' => 'Turning nature\'s versatility into palm-based food products and advanced oleochemicals',
 
     // Products index
-    'products.meta_title' => 'Products – Cisadane Raya Chemical',
+    'products.meta_title' => 'Products – Cisadane Raya Chemicals',
     'products.meta_description' => 'Explore our range of sustainable products including feedstocks, methyl ester, and other solutions.',
     'products.portfolio_title' => 'Our High-Quality Oleochemical Portfolio',
     'products.palm_oil' => 'Palm Oil',
@@ -77,8 +77,8 @@ return [
     ],
 
     // Company - About
-    'company.about.meta_title' => 'About Us – Cisadane Raya Chemical',
-    'company.about.meta_description' => 'Learn about Cisadane Raya Chemical: our mission, vision, and commitment to sustainability.',
+    'company.about.meta_title' => 'About Us – Cisadane Raya Chemicals',
+    'company.about.meta_description' => 'Learn about Cisadane Raya Chemicals: our mission, vision, and commitment to sustainability.',
     'company.about.hero_title' => '"Nurturing Human Life Through the Gifts of the Palm Since 1975"',
     'company.about.hero_paragraph1' => 'For centuries, the palm has quietly sustained human civilization by nourishing bodies, supporting homes, and enabling industries that shape modern life. Since 1975, PT Cisadane Raya Chemicals has carried this legacy forward, transforming palm-based resources into refined edible oils and oleochemical solutions that touch everyday living across cultures and continents.',
     'company.about.hero_paragraph2' => 'Rooted in Indonesia and connected to global markets, CRC combines decades of downstream expertise with disciplined processing and quality-driven operations. Our products serve food manufacturers, personal care brands, home care producers, and industrial partners, providing essential inputs that support safety, functionality, and reliability throughout the value chain.',
@@ -90,8 +90,8 @@ return [
     'company.about.our_commitment_text' => 'CRC operates with a strong focus on responsible processing, regulatory compliance, and continuous improvement to meet evolving customer needs, sustainability requirements, and global supply chain expectations.',
 
     // Company - Sustainability
-    'company.sustainability.meta_title' => 'Sustainability – Cisadane Raya Chemical',
-    'company.sustainability.meta_description' => 'Learn about Cisadane Raya Chemical sustainability commitments and certifications.',
+    'company.sustainability.meta_title' => 'Sustainability – Cisadane Raya Chemicals',
+    'company.sustainability.meta_description' => 'Learn about Cisadane Raya Chemicals sustainability commitments and certifications.',
     'company.sustainability.sdg_alt' => 'Sustainable Development Goals',
     'company.sustainability.hero_text' => 'Since its establishment, PT Cisadane Raya Chemicals has believed that true progress is built together with the communities around us. As we carry out our operations, CRC grows alongside local communities, sharing responsibility, connection, and mutual care.',
     'company.sustainability.card1_text' => 'CRC is committed to responsible sourcing, ethical business practices, and environmental stewardship. Our Sustainability Policy provides the framework for managing environmental, social, and governance responsibilities cross refinery operations while supporting a transparent and traceable supply chain',
@@ -104,8 +104,8 @@ return [
     'company.sustainability.card4_label' => 'Corporate Social Responsibility',
 
     // Contact
-    'contact.meta_title' => 'Contact Us – Cisadane Raya Chemical',
-    'contact.meta_description' => 'Get in touch with Cisadane Raya Chemical for corporate, partnership, or sustainability inquiries.',
+    'contact.meta_title' => 'Contact Us – Cisadane Raya Chemicals',
+    'contact.meta_description' => 'Get in touch with Cisadane Raya Chemicals for corporate, partnership, or sustainability inquiries.',
     'contact.heading' => 'GET IN TOUCH<br>WITH US',
     'contact.intro' => 'Reach out to our team to explore potential collaboration opportunities. We look forward to connecting with you and will respond at the earliest opportunity.',
     'contact.address_line1' => 'Samsung Hub',

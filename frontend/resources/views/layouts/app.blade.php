@@ -42,7 +42,7 @@
         <div class="container">
             <nav class="nav">
                 <a href="{{ route('home') }}" class="brand">
-                    <img src="{{ asset('assets/logo_crc.png') }}" alt="Cisadane Raya Chemical Logo" />
+                    <img src="{{ asset('assets/logo_crc.png') }}" alt="Cisadane Raya Chemicals Logo" />
                 </a>
                 <button
                     class="nav-toggle"
@@ -106,7 +106,7 @@
             <div class="footer-grid footer-grid-two">
                 <div>
                     <div class="brand">
-                        <img src="{{ asset('assets/logo_crc.png') }}" alt="Cisadane Raya Chemical Logo" style="height: 40px;" />
+                        <img src="{{ asset('assets/logo_crc.png') }}" alt="Cisadane Raya Chemicals Logo" style="height: 40px;" />
                     </div>
                     <p class="footer-text">
                         {{ __('messages.footer.tagline') }}

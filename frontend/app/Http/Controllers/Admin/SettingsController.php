@@ -14,7 +14,7 @@ class SettingsController extends Controller
     public function index()
     {
         $settings = [
-            'company_name' => SiteSetting::get('company_name', 'Cisadane Raya Chemical'),
+            'company_name' => SiteSetting::get('company_name', 'Cisadane Raya Chemicals'),
             'company_address' => SiteSetting::get('company_address', ''),
             'company_phone' => SiteSetting::get('company_phone', ''),
             'company_email' => SiteSetting::get('company_email', 'info@greenresources.com'),

@@ -23,11 +23,11 @@ class PageSeeder extends Seeder
             [
                 'slug' => $normalizeSlug('home'),
                 'title' => 'Home',
-                'meta_title' => 'Cisadane Raya Chemical – Sustainable Solutions',
-                'meta_description' => 'Cisadane Raya Chemical is a modern, sustainable organization committed to excellence and environmental responsibility.',
+                'meta_title' => 'Cisadane Raya Chemicals – Sustainable Solutions',
+                'meta_description' => 'Cisadane Raya Chemicals is a modern, sustainable organization committed to excellence and environmental responsibility.',
                 'status' => 'published',
                 'banner' => [
-                    'title' => 'Welcome to Cisadane Raya Chemical',
+                    'title' => 'Welcome to Cisadane Raya Chemicals',
                     'subtitle' => 'Sustainable Solutions for a Better Future',
                     'image' => 'assets/HEADER CISADANE RAYA CHEMICAL.png'
                 ]
@@ -35,8 +35,8 @@ class PageSeeder extends Seeder
             [
                 'slug' => $normalizeSlug('company-about-us'),
                 'title' => 'About Us',
-                'meta_title' => 'About Us – Cisadane Raya Chemical',
-                'meta_description' => 'Learn about Cisadane Raya Chemical, our mission, values, and commitment to sustainability.',
+                'meta_title' => 'About Us – Cisadane Raya Chemicals',
+                'meta_description' => 'Learn about Cisadane Raya Chemicals, our mission, values, and commitment to sustainability.',
                 'status' => 'published',
                 'banner' => [
                     'title' => 'About Us',
@@ -47,7 +47,7 @@ class PageSeeder extends Seeder
             [
                 'slug' => $normalizeSlug('company-location'),
                 'title' => 'Location',
-                'meta_title' => 'Location – Cisadane Raya Chemical',
+                'meta_title' => 'Location – Cisadane Raya Chemicals',
                 'meta_description' => 'Find our office locations and contact information.',
                 'status' => 'published',
                 'banner' => [
@@ -59,7 +59,7 @@ class PageSeeder extends Seeder
             [
                 'slug' => $normalizeSlug('company-sustainability'),
                 'title' => 'Sustainability',
-                'meta_title' => 'Sustainability – Cisadane Raya Chemical',
+                'meta_title' => 'Sustainability – Cisadane Raya Chemicals',
                 'meta_description' => 'Our commitment to sustainable practices and environmental responsibility.',
                 'status' => 'published',
                 'banner' => [
@@ -71,8 +71,8 @@ class PageSeeder extends Seeder
             [
                 'slug' => $normalizeSlug('company-commercial-partner'),
                 'title' => 'Commercial Partner',
-                'meta_title' => 'Commercial Partner – Cisadane Raya Chemical',
-                'meta_description' => 'Partner with Cisadane Raya Chemical for sustainable business solutions.',
+                'meta_title' => 'Commercial Partner – Cisadane Raya Chemicals',
+                'meta_description' => 'Partner with Cisadane Raya Chemicals for sustainable business solutions.',
                 'status' => 'published',
                 'banner' => [
                     'title' => 'Commercial Partner',
@@ -83,7 +83,7 @@ class PageSeeder extends Seeder
             [
                 'slug' => $normalizeSlug('product-feedstocks'),
                 'title' => 'Feedstocks',
-                'meta_title' => 'Feedstocks – Cisadane Raya Chemical Products',
+                'meta_title' => 'Feedstocks – Cisadane Raya Chemicals Products',
                 'meta_description' => 'Explore our range of sustainable feedstock products.',
                 'status' => 'published',
                 'banner' => [
@@ -95,7 +95,7 @@ class PageSeeder extends Seeder
             [
                 'slug' => $normalizeSlug('product-methyl-ester'),
                 'title' => 'Methyl Ester',
-                'meta_title' => 'Methyl Ester – Cisadane Raya Chemical Products',
+                'meta_title' => 'Methyl Ester – Cisadane Raya Chemicals Products',
                 'meta_description' => 'High-quality methyl ester products for various applications.',
                 'status' => 'published',
                 'banner' => [
@@ -107,7 +107,7 @@ class PageSeeder extends Seeder
             [
                 'slug' => $normalizeSlug('product-other'),
                 'title' => 'Other Products',
-                'meta_title' => 'Other Products – Cisadane Raya Chemical',
+                'meta_title' => 'Other Products – Cisadane Raya Chemicals',
                 'meta_description' => 'Discover our other sustainable product offerings.',
                 'status' => 'published',
                 'banner' => [
@@ -119,8 +119,8 @@ class PageSeeder extends Seeder
             [
                 'slug' => $normalizeSlug('contact-us-fulfill-form'),
                 'title' => 'Fulfill Form',
-                'meta_title' => 'Contact Form – Cisadane Raya Chemical',
-                'meta_description' => 'Get in touch with Cisadane Raya Chemical. Fill out our contact form.',
+                'meta_title' => 'Contact Form – Cisadane Raya Chemicals',
+                'meta_description' => 'Get in touch with Cisadane Raya Chemicals. Fill out our contact form.',
                 'status' => 'published',
                 'banner' => [
                     'title' => 'Contact Us',
@@ -131,8 +131,8 @@ class PageSeeder extends Seeder
             [
                 'slug' => $normalizeSlug('contact-us-contacts'),
                 'title' => 'Contacts',
-                'meta_title' => 'Contacts – Cisadane Raya Chemical',
-                'meta_description' => 'Contact information for Cisadane Raya Chemical offices and departments.',
+                'meta_title' => 'Contacts – Cisadane Raya Chemicals',
+                'meta_description' => 'Contact information for Cisadane Raya Chemicals offices and departments.',
                 'status' => 'published',
                 'banner' => [
                     'title' => 'Contacts',

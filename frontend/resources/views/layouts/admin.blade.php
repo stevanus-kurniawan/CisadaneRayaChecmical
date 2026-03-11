@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'Admin – Cisadane Raya Chemical CMS')</title>
+    <title>@yield('title', 'Admin – Cisadane Raya Chemicals CMS')</title>
     
     {{-- Favicon --}}
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}" />

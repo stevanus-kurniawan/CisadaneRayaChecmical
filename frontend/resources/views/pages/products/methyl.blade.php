@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Methyl Ester – Cisadane Raya Chemical')
+@section('title', 'Methyl Ester – Cisadane Raya Chemicals')
 @section('description', 'Explore our methyl ester products including PME, SME, and TME.')
 
 @section('content')

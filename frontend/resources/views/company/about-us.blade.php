@@ -3,22 +3,22 @@
 @php
 $banner = [
     'title' => 'About Us',
-    'subtitle' => 'Learn more about Cisadane Raya Chemical',
+    'subtitle' => 'Learn more about Cisadane Raya Chemicals',
     'image' => 'assets/HEADER CISADANE RAYA CHEMICAL.png'
 ];
 @endphp
 
-@section('title', 'About Us – Cisadane Raya Chemical')
-@section('description', 'Learn about Cisadane Raya Chemical: our mission, vision, and commitment to sustainability.')
+@section('title', 'About Us – Cisadane Raya Chemicals')
+@section('description', 'Learn about Cisadane Raya Chemicals: our mission, vision, and commitment to sustainability.')
 
 @section('content')
 <section class="section">
     <div class="container">
         <div class="section-header">
             <div class="section-kicker">Company</div>
-            <h1 class="section-title">About Cisadane Raya Chemical</h1>
+            <h1 class="section-title">About Cisadane Raya Chemicals</h1>
             <p class="section-description">
-                Cisadane Raya Chemical is a forward-looking organization focused on sustainable 
+                Cisadane Raya Chemicals is a forward-looking organization focused on sustainable 
                 growth, innovation, and environmental responsibility. We are committed 
                 to providing high-quality products and services that support a greener future.
             </p>

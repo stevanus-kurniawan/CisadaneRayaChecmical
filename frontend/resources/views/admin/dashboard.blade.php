@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Admin Dashboard – Cisadane Raya Chemical CMS')
+@section('title', 'Admin Dashboard – Cisadane Raya Chemicals CMS')
 
 @section('content')
 <div class="admin-wrapper">
@@ -9,7 +9,7 @@
             <div class="admin-nav">
                 <a href="{{ route('home') }}" class="brand">
                     <span class="brand-mark">GR</span>
-                    <span>Cisadane Raya Chemical CMS</span>
+                    <span>Cisadane Raya Chemicals CMS</span>
                 </a>
                 <div class="admin-nav-links">
                     <a href="{{ route('admin.dashboard') }}" class="active">Dashboard</a>
@@ -31,7 +31,7 @@
     <main class="admin-main">
         <div class="container">
             <h1 class="admin-title">Dashboard</h1>
-            <p class="admin-subtitle">Welcome to the Cisadane Raya Chemical CMS</p>
+            <p class="admin-subtitle">Welcome to the Cisadane Raya Chemicals CMS</p>
 
             <div class="admin-grid">
                 <div class="admin-card">
